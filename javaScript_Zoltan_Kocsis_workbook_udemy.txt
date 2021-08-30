@@ -1,0 +1,6286 @@
+##########################
+##########################
+4. A Brief Introduction to JavaScript.mp4
+##########################
+##########################
+
+html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Section 2: JavaScript Language Basics</title>
+    </head>
+
+    <body>
+        <h1>Section 2: JavaScript Language Basics</h1>
+    </body>
+
+
+    <script src="script.js"> </script>
+</html>
+
+
+##
+>>>>javascript
+
+
+
+/*
+Variables and data types
+
+
+var firstName = 'Zoli';
+console.log(firstName);
+
+var lastName = 'Kocsis';
+var age = 28;
+
+var fullAge = true;
+console.log(fullAge);
+
+var job;
+console.log(job);
+
+job = 'Teacher';
+console.log(job);
+
+//Variable naming rules
+var _3years =3;
+
+
+
+var firsName = 'John';
+
+var age = 28;
+
+//Type coercion
+console.log(firsName + ' ' + age);
+
+var job, isMarried;
+job = 'teacher';
+isMarried = false;
+
+console.log(firsName + ' is a ' + age + ' year old ' + job + '. Is he maried? ' + isMarried);
+
+//Variable mutationû
+age = "twenty eight";
+job = 'driver';
+
+alert(firsName + ' is a ' + age + ' year old ' + job + '. Is he maried? ' + isMarried);
+
+var lastName = prompt('What is his last name?');
+console.log(firsName + ' ' + lastName);
+
+*/
+
+
+##########################
+##########################
+7. Basic Operators.mp4
+##########################
+##########################
+var year, yearZoli, yearCica;
+var now = 2020;
+ageZoli = 32;
+ageCica = 29;
+
+//math operator
+var yearZoli = now - ageZoli;
+var yearCica = now - ageCica;
+
+console.log(yearZoli);
+
+console.log(now + 2);
+console.log(now * 2);
+console.log(now / 10);
+
+//logival operators
+var zoliOlder = ageZoli < ageCica;
+console.log(zoliOlder);
+
+
+//typeof operator
+console.log(typeof zoliOlder);
+console.log(typeof ageZoli);
+console.log(typeof 'Zoli older then cica');
+var x;
+console.log(typeof x);
+
+
+
+##########################
+##########################
+8. Operator Precedence.mp4
+##########################
+##########################
+jonas oldalán Operator precedence
+
+
+var now = 2020;
+var ageZoli = 1988;
+var fullAge = 18;
+
+//Multiple operators
+var isFullAge = now - ageZoli >= fullAge;
+console.log(isFullAge);
+
+//Grouping
+var ageZoli = now - ageZoli;
+var ageCica = 35;
+var average = ageZoli + ageCica / 2;
+console.log(average);
+
+//Multiple assgnment
+var x, y;
+x = y = (3 + 5) * 4 - 6; //8 * 4 - 6
+console.log(x);
+
+//More operators
+//x = x * 2;  //ez x *= 2
+x *= 2;
+console.log(x);
+x += 10;
+console.log(x);
+x++;
+console.log(x);
+
+
+
+##########################
+##########################
+10. Coding Challenge 1 Solution.mp4
+##########################
+##########################
+BMI
+
+var massMark = 78; //kg
+var heightMark = 1.69; //meters
+
+var massJohn = 92;
+var heightJohn = 1.95;
+
+var BMIMark = massMark / (heightMark * heightMark);
+var BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn)
+
+var markHigherBmi = BMIMark > BMIJohn;
+console.log('Is Mark\'s BMI higher than John\s? ' + markHigherBmi);
+
+
+
+##########################
+##########################
+11. If  else Statements.mp4
+##########################
+##########################
+var firstName = 'John';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' will hopfully marrry soon :)')
+}
+
+var isMarried = true;
+if (isMarried) {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' will hopfully marrry soon :)')
+}
+
+
+
+
+
+
+##########################
+##########################
+11. If  else Statements.mp4
+##########################
+##########################
+
+var massMark = 78;
+var heightMark = 1.69;
+
+var massJohn = 92;
+var heightJohn = 1.95;
+
+var BMIMark = massMark / (heightMark * heightMark);
+var BMIJohn = massJohn / (heightJohn * heightJohn);
+
+if (BMIMark > BMIJohn) {
+    console.log('Mark\'s BMI is higher than John\s!');
+} else {
+    console.log('John\'s BMI is higher than Mark\s!');
+}
+
+
+
+
+##########################
+##########################
+12. Boolean Logic.mp4
+##########################
+##########################
+
+//Boolen logic
+
+var firstName = 'John';
+age = 20;
+
+if (age < 13 ) {
+    console.log(firstName + ' is a boy!');
+} else if (age >= 16 && age < 20) {
+    console.log(firstName + ' is a teenager!');
+} else if (age >= 20 && age < 30) {
+    console.log(firstName + ' is a young man!')
+} else {
+    console.log(firstName + ' is a man!');
+}
+
+##########################
+##########################
+13. The Ternary Operator and Switch Statements.mp4
+##########################
+##########################
+
+//The Ternary Operator amd Switch Statements
+
+var firstName = 'John';
+age = 16;
+
+//Ternary Operator
+age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
+
+var drink = age >= 18 ? 'beer' : 'juice';
+console.log(drink);
+
+/*
+if (age >= 15){
+    console.log('beer');
+} else {
+    console.log('juice')
+}
+*/
+
+//Switch statement
+var job = 'teacher';
+switch (job) {
+    case 'teacher':
+    case 'instructor':
+        console.log(firstName + ' teacher kids how to code.');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives an uber in Lisabon');
+        break;
+    case 'designer':
+        console.log(firstName + ' designs beautiful websites.');
+        break;
+    default:
+        console.log(firstName + ' does something else.');
+}
+
+
+//A lenti IF et írom fel switch be
+
+age = 56;
+switch (true) {
+    case age < 13: 
+        console.log(firstName + ' is a boy!');
+        break;
+    case age >= 16 && age < 20:
+        console.log(firstName + ' is a teenager!');
+        break;
+    case age >= 20 && age < 30:
+        console.log(firstName + ' is a young man!');
+        break;
+    default:
+        console.log(firstName + ' is a man!');
+}
+
+/*
+var firstName = 'John';
+age = 20;
+
+if (age < 13 ) {
+    console.log(firstName + ' is a boy!');
+} else if (age >= 16 && age < 20) {
+    console.log(firstName + ' is a teenager!');
+} else if (age >= 20 && age < 30) {
+    console.log(firstName + ' is a young man!')
+} else {
+    console.log(firstName + ' is a man!');
+}
+*/
+
+
+##########################
+##########################
+14. Truthy and Falsy Values and Equality Operators.mp4
+##########################
+##########################
+
+//Truthy and Falsy values and equality operators
+
+//Falsy values: undefined, null, 0, '', NaN (Not a Number)
+//Truthy values: NOT falsy values
+
+var height;
+height = 'twenty';
+
+if (height || height === 0) {
+    console.log('Variable is defined.')
+} else {
+    console.log('Variable has NOT benn defined.')
+}
+
+
+//Equality operators
+
+if (height === '23') {
+    console.log('The == the operator typ has coercion, a === jelentese a teljesen egyenlo')
+}
+
+##########################
+##########################
+15. Coding Challenge 2.mp4
+##########################
+##########################
+
+var scoreJohn = (89 + 120 + 103) / 3;
+var scoreMike = (116 +94 + 123) / 3;
+var scoreMary = (97 + 134 + 105) / 3;
+console.log(scoreJohn, scoreMike, scoreMary);
+
+if (scoreJohn > scoreMike && scoreJohn > scoreMary) {
+    console.log('John\'s team wins with ' + scoreJohn + ' points');
+} else if (scoreMike > scoreJohn && scoreMike > scoreMary)  {
+    console.log('MIke\'s team wins with ' + scoreJohn + ' points');
+} else if (scoreMary > scoreMike && scoreMary > scoreJohn) {
+    console.log('Mary\'s team wins with ' + scoreMary + ' points');
+} else {
+    console.log('There is a draw');
+}
+
+
+
+//John and Mike csak
+/*
+if (scoreJohn > scoreMike) {
+    console.log('John\'s team wins with ' + scoreJohn + ' points');
+} else if (scoreMike > scoreJohn ) {
+    console.log('MIke\'s team wins with ' + scoreJohn + ' points');
+} else {
+    console.log('There is a draw');
+}
+*/
+
+
+##########################
+##########################
+17. Functions.mp4
+##########################
+##########################
+
+//Function
+
+function calculateAge(birthDay) {
+    return 2018 - birthDay;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageMary = calculateAge(1969);
+console.log(ageJohn, ageMary, ageMike);
+
+
+function yearsUntilRetirement(year, firstname) {
+    var age = calculateAge(year)
+    var retirement = 65 - age;
+
+    if (retirement > 0) {
+        console.log(firstname + ' retires in ' + retirement + ' years.');
+    } else {
+        console.log(firstname + ' is already retired.')
+    }
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
+
+##########################
+##########################
+18. Function Statements and Expressions.mp4
+##########################
+##########################
+
+// Function Statements and Expressions
+
+//Function declaration
+/*function whatDoYouDo(job, firstName) {} */
+
+//Function expression
+
+var whatDoYouDo = function(job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives a cab in Lisabon';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
+
+##########################
+##########################
+19. Arrays.mp4
+##########################
+##########################
+
+//Arrays
+
+//Initialize new arrays
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[2]);
+console.log(names.length);
+
+//Mutate array Date
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+
+//Different data types
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('Blue');
+john.unshift('Mr.');
+console.log(john);
+
+john.pop();
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(1990));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
+
+##########################
+##########################
+20. Coding Challenge 3.mp4
+##########################
+##########################
+
+
+
+function tippCalculator(bill) {
+    var percentage;
+    if (bill < 50) {
+        percentage = .2;
+    } else if (bill >= 50 && bill < 200) {
+        percentage = .15;
+    } else {
+        percentage = .1;
+    }
+    return percentage * bill;
+}
+
+var bills = [124, 48, 268];
+var tips =  [tippCalculator(bills[0]),
+             tippCalculator(bills[1]),
+             tippCalculator(bills[2])];
+
+var finalValues =  [bills[0] + tips[0],
+                    bills[0] + tips[1],
+                    bills[2] + tips[2]];
+
+console.log(tips, finalValues);
+
+##########################
+##########################
+22. Objects and Properties.mp4
+##########################
+##########################
+
+
+// Object literal
+var john = {
+    fisrtName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john.fisrtName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+//New Object syntax
+var jane = new Object();
+jane.fisrtName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
+
+
+
+##########################
+##########################
+23. Objects and Methods.mp4
+##########################
+##########################
+
+
+// Object and methods
+var john = {
+    fisrtName: 'John',
+    lastName: 'Smith',
+    birthYear: 1992,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+    calcAge: function() {
+        this.age = 2018 - this.birthYear;
+    }
+};
+
+john.calcAge();
+console.log(john);
+
+
+##########################
+##########################
+25. Coding Challenge 4 Solution.mp4
+##########################
+##########################
+
+
+var john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+
+var mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+}
+
+
+john.calcBMI();
+mark.calcBMI();
+console.log(john, mark);
+
+
+if (john.calcBMI() > mark.calcBMI()) {
+    console.log(john.fullName + ' has a highest BMI of ' + john.bmi);
+} else if (mark.bmi > john.bmi) {
+    console.log(mark.fullName + ' has a highest BMI of ' + mark.bmi);
+} else {
+    console.log('They have the same BMI.');
+}
+
+##########################
+##########################
+26. Loops and Iteration.mp4
+##########################
+##########################
+
+//Loops and iteraction
+
+// For loop
+for (var i = 1; i <= 20; i++) { // i += 2 az i++ helyére és 2 sével írja ki a számokat
+    console.log(i);
+}
+
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to console, i++
+//..
+// i = 9, 9 < 10 true, log i to console, i++
+// i = 10, 10 < 10 FALSE, exit the loop
+
+
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+for ( var i = 0; i < john.length; i++) { 
+    console.log(john[i]);
+}
+
+
+// While
+var i = 0;
+while ( i < john.length){
+    console.log(john[i]);
+    i++;
+}
+
+
+// Continue and break statements a false t és a számokat nem írja ki
+for ( var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
+
+for ( var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') break; //itt a break megáll a szám elõtt mert az már nem string
+    console.log(john[i]);
+}
+
+
+//Looping backwards
+
+for ( var i = john.length -1; i >= 0; i--) {
+    console.log(john[i]);
+}
+
+##########################
+##########################
+28. Coding Challenge 5 Solution, Part 1.mp4
+##########################
+##########################
+
+
+var john = {
+    fullName: 'John Smith',
+    bills: [124, 48, 268, 180, 42],
+    calcTips: function() {
+        this.tips =  [];
+        this.finalValues = [];
+
+        for ( var i = 0; i < this.bills.length; i++) {
+            
+            //Determine percentage based on tiping rules
+            var percentage;
+            var bill = this.bills[i];
+
+            if (bill < 50) {
+                percentage = .2;
+            } else if (bill >= 50 && bill < 200) {
+                percentage = .15;
+            } else {
+                percentage = .1;
+            }
+
+            //Add results to the corresponding arrays
+            this.tips[i] = bill *percentage;
+            this.finalValues[i] = bill + bill * percentage;
+        }
+    }
+}
+
+john.calcTips();
+console.log(john);
+
+
+
+##########################
+##########################
+29. Coding Challenge 5 Solution, Part 2.mp4
+##########################
+##########################
+
+
+var john = {
+    fullName: 'John Smith',
+    bills: [124, 48, 268, 180, 42],
+    calcTips: function() {
+        this.tips =  [];
+        this.finalValues = [];
+
+        for ( var i = 0; i < this.bills.length; i++) {
+            
+            //Determine percentage based on tiping rules
+            var percentage;
+            var bill = this.bills[i];
+
+            if (bill < 50) {
+                percentage = .2;
+            } else if (bill >= 50 && bill < 200) {
+                percentage = .15;
+            } else {
+                percentage = .1;
+            }
+
+            //Add results to the corresponding arrays
+            this.tips[i] = bill *percentage;
+            this.finalValues[i] = bill + bill * percentage;
+        }
+    }
+}
+
+var mark = {
+    fullName: 'Mark Miller',
+    bills: [77, 475, 110, 45],
+    calcTips: function() {
+        this.tips =  [];
+        this.finalValues = [];
+
+        for ( var i = 0; i < this.bills.length; i++) {
+            
+            //Determine percentage based on tiping rules
+            var percentage;
+            var bill = this.bills[i];
+
+            if (bill < 100) {
+                percentage = .2;
+            } else if (bill >= 100 && bill < 300) {
+                percentage = .1;
+            } else {
+                percentage = .25;
+            }
+
+            //Add results to the corresponding arrays
+            this.tips[i] = bill *percentage;
+            this.finalValues[i] = bill + bill * percentage;
+        }
+    }
+}
+
+
+function calcAverage(tips) {
+    var sum = 0;
+    for (var i = 0; i < tips.length; i++) {
+        sum = sum + tips[i];
+    }
+    return sum / tips.length;
+}
+
+//Do the calculation
+john.calcTips();
+mark.calcTips();
+
+john.average = calcAverage(john.tips);
+mark.average = calcAverage(mark.tips);
+console.log(john, mark);
+
+if (john.average > mark.average) {
+    console.log(john.fullName + '\'s family pays higher tips, with an average of $' + john.average);
+} else if (mark.average > john.average) {
+    console.log(mark.fullName + '\'s family pays higher tips, with an average of $' + mark.average);
+}
+
+
+##########################
+##########################
+30. JavaScript Versions ES5, ES6  ES2015 and ES6+.mp4
+##########################
+##########################
+
+
+
+######################################################################################################################################################################################
+3. How JavaScript Works Behind the Scenes																							3. How JavaScript Works Behind the Scenes
+######################################################################################################################################################################################
+
+
+
+##########################
+##########################
+6. Hoisting in Practice.mp4
+##########################
+##########################
+
+///////////////////////////////////////
+// Lecture: Hoisting
+
+// functions
+calculateAge(1965);
+function calculateAge(year) {
+    console.log(2020 - year);
+}
+
+calculateAge(1965);
+
+
+//retirement(1956);
+var retirement = function(year) {
+    console.log(65 - (2016 - year));
+}
+retirement(1956);
+
+
+//variables
+console.log(age);
+var age = 23;
+
+function foo() {
+    console.log(age);
+    var age = 65;
+    console.log(age);
+}
+foo();
+console.log(age);
+
+##########################
+##########################
+7. Scoping and the Scope Chain.mp4
+##########################
+##########################
+
+///////////////////////////////////////
+// Lecture: Scoping
+
+
+// First scoping example
+
+
+var a = 'Hello!';
+first();
+
+function first() {
+    var b = 'Hi!';
+    second();
+
+    function second() {
+        var c = 'Hey!';
+        console.log(a + b + c);
+    }
+}
+
+
+// Itt van a c hes hozzáférésünk a scope jelentése hatóköre van miatt
+var a = 'Hello!';
+first();
+
+function first() {
+    var b = 'Hi!';
+    second();
+
+    function second() {
+        var c = 'Hey!';
+        third()
+    }
+}
+
+function third() {
+    var d = 'John';
+    //console.log(c);
+    console.log( a + d );
+
+}
+
+##########################
+##########################
+9. The 'this' Keyword in Practice.mp4
+##########################
+##########################
+
+///////////////////////////////////////
+// Lecture: The this keyword
+
+console.log(this);
+
+//másik itt a function alatt a console.log(this) miatt window errort ír ki
+
+calculateAge(1985);
+
+function calculateAge(year) {
+    console.log(2016 - year);
+    console.log(this);
+}
+calculateAge(1985);
+
+
+//
+
+//másik
+
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    calculateAge: function() {
+        console.log(this);
+        console.log(2016 - this.yearOfBirth)
+
+		//ez csak tesztre kellett hogy a this innen nem mûködik
+		/*
+        function innerFunction() {
+            console.log(this);
+        }
+        innerFunction();
+		*/
+    }
+}
+
+john.calculateAge();
+
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984
+};
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
+
+
+
+######################################################################################################################################################################################
+4. JavaScript in the Browser DOM Manipulation and Events																							4. JavaScript in the Browser DOM Manipulation and Events
+######################################################################################################################################################################################
+
+
+
+##########################
+##########################
+6. First DOM Access and Manipulation.mp4
+##########################
+##########################
+
+index.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
+
+
+
+##
+>>>style.css
+
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+##
+>>>app.js
+
+
+var scores, roundScore, activePlayer, dice;
+
+scores = [0, 0];                                                         //itt ez a Player 1 és player 2 array ba tehát tömb be
+roundScore = 0;
+activePlayer = 0;                                                        //a játékosok 0 ás vagy 1 es tehet Player 1 vagy Player 2
+
+dice = Math.floor(Math.random() * 6 ) + 1;                               //floor kerekítés, random random szám generálás, 6 oldala van a kockának de 0 tól kezd ezért még hozzá kell egyet adni
+//console.log(dice);
+
+document.querySelector('#current-' + activePlayer).textContent = dice;    //a querySelector kiválasztja a HTML bõl a current- object et. a textContent pedig a kiiratja a számot tehát nem az lesz benne amit alaõból megadtunk a HTML ben itt a 11  volt megadva
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';           //itt tudnánk javaScript bõl formázni a HTML szöveget
+
+var x = document.querySelector('#score-0').textContent;                  //itt az X et csak tárolásra hozzuk létre GETTING nek
+console.log(x);
+
+
+document.querySelector('.dice').style.display = 'none';                 //ezzel tüntetem el a kocát az elejárõl a .dice a HTML bõl van a képnél és s display t beállítomnone ra hogy ne jelenítse meg
+
+
+
+##########################
+##########################
+7. Events and Event Handling Rolling the Dice.mp4
+##########################
+##########################
+https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+
+
+
+
+var scores, roundScore, activePlayer, dice;
+
+scores = [0, 0];                                                         //itt ez a Player 1 és player 2 array ba tehát tömb be
+roundScore = 0;
+activePlayer = 1;                                                        //a játékosok 0 ás vagy 1 es tehet Player 1 vagy Player 2
+
+document.querySelector('.dice').style.display = 'none';                 //ezzel tüntetem el a kocát az elejárõl a .dice a HTML bõl van a képnél és s display t beállítomnone ra hogy ne jelenítse meg
+
+//ezekkel nullázom le az össszes számot amit a HTML ben példaként megadtam, ez a getElementById ugyan az kb mint lent a querySelector
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
+
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6 ) + 1;
+
+    // 2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';                                     //visszateszem a képernyõre a kockát
+    diceDOM.src = 'dice-' + dice + '.png';
+});
+
+
+##########################
+##########################
+8. Updating Scores and Changing the Active Player.mp4
+##########################
+##########################
+
+
+var scores, roundScore, activePlayer, dice;
+
+scores = [0, 0];                                                         //itt ez a Player 1 és player 2 array ba tehát tömb be
+roundScore = 0;
+activePlayer = 0;                                                        //a játékosok 0 ás vagy 1 es tehet Player 1 vagy Player 2
+
+document.querySelector('.dice').style.display = 'none';                 //ezzel tüntetem el a kocát az elejárõl a .dice a HTML bõl van a képnél és s display t beállítomnone ra hogy ne jelenítse meg
+
+//ezekkel nullázom le az össszes számot amit a HTML ben példaként megadtam
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
+
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6 ) + 1;
+
+    // 2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';                                     //visszateszem a képernyõre a kockát
+    diceDOM.src = 'dice-' + dice + '.png';
+
+    // 3. Update the round score if the rolled number was NOT 1
+    if (dice !== 1) {
+        // Add score
+        roundScore += dice;                                             //roundscore = roundsoce + dice
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;          
+    } else {
+        // Next player
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        /*if (activePlayer === 0) {                                     //ez ugyan az mint a felsõ sor csak ternary operatorral a fenti jobb
+            activePlayer = 1;
+        } else {
+            activePlayer = 0;
+        } */
+        roundScore = 0;                                                 //ezzel érem el hogy a az új pörgetés értékét adja hozzá  a current hez nem pedig a masik player teljes összegét
+        
+        document.getElementById('current-0').textContent = '0';         //a currenteket nullázok ki a pörgetés után
+        document.getElementById('current-1').textContent = '0';
+
+        document.querySelector('.player-0-panel').classList.toggle('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+        document.querySelector('.player-1-panel').classList.toggle('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+        
+        /*// itt levettem meg vissza raktam az active részt de ezt meg tudom úgy csinálni hogy a toggle t teszem be a remove és az add helyére
+        document.querySelector('.player-0-panel').classList.remove('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+        document.querySelector('.player-1-panel').classList.add('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+        */
+
+        document.querySelector('.dice').style.display = 'none';
+        
+    }
+});
+
+
+##########################
+##########################
+9. Implementing Our 'Hold' Function and the DRY Principle.mp4
+##########################
+##########################
+
+
+var scores, roundScore, activePlayer, dice;
+
+scores = [0, 0];                                                         //itt ez a Player 1 és player 2 pontjai nak a tárolására van a legnagyobb szám
+roundScore = 0;
+activePlayer = 0;                                                        //a játékosok 0 ás vagy 1 es tehet Player 1 vagy Player 2
+
+document.querySelector('.dice').style.display = 'none';                 //ezzel tüntetem el a kocát az elejárõl a .dice a HTML bõl van a képnél és s display t beállítomnone ra hogy ne jelenítse meg
+
+//ezekkel nullázom le az össszes számot amit a HTML ben példaként megadtam
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
+
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6 ) + 1;
+
+    // 2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';                                     //visszateszem a képernyõre a kockát
+    diceDOM.src = 'dice-' + dice + '.png';
+
+    // 3. Update the round score if the rolled number was NOT 1
+    if (dice !== 1) {
+        // Add score
+        roundScore += dice;                                             //roundscore = roundscore + dice
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;          
+    } else {
+        // Next player
+        nextPlayer();        
+    }
+});
+
+
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    // Add CURRENT score to global score, itt adom hozzá a HOLD buttonnal a nagy score hez a pontszámot
+    scores[activePlayer] += roundScore;                                         // ez ezt jelenti scores[activePlayer] = scores[activePlayer] + roundScore;
+
+    // Update the UI
+    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+    // Check if player won the game
+    if (scores[activePlayer]  >= 20) {
+        document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+        document.querySelector('.dice').style.display = 'none';
+        document.querySelector('.player-' + activePlayer + -panel).classList.add('winner');                 //itt a vinner az a CSS ben van definiálva
+        document.querySelector('.player-' + activePlayer + -panel).classList.remove('active');              //active a CSS ben van definiálva ott van beállítva hogy piros lesz a betõ is STB
+    } else {
+    // Next player
+    nextPlayer();   
+    }
+
+      
+});
+
+
+//DRY miatt ezt a fügvényt hoztuk létre
+
+function nextPlayer() {
+            // Next player
+            activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+            /*if (activePlayer === 0) {                                     //ez ugyan az mint a felsõ sor csak ternary operatorral a fenti jobb
+                activePlayer = 1;
+            } else {
+                activePlayer = 0;
+            } */
+            roundScore = 0;                                                 //ezzel érem el hogy a az új pörgetés értékét adja hozzá  a current hez nem pedig a masik player teljes összegét
+            
+            document.getElementById('current-0').textContent = '0';         //a currenteket nullázok ki a pörgetés után
+            document.getElementById('current-1').textContent = '0';
+    
+            document.querySelector('.player-0-panel').classList.toggle('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.toggle('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            
+            /*// itt levettem meg vissza raktam az active részt de ezt meg tudom úgy csinálni hogy a toggle t teszem be a remove és az add helyére
+            document.querySelector('.player-0-panel').classList.remove('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.add('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            */
+    
+            document.querySelector('.dice').style.display = 'none';         
+}
+
+
+//document.querySelector('#current-' + activePlayer).textContent = dice;    //a querySelector kiválasztja a HTML bõl a current- object et. a textContent pedig a kiiratja a számot tehát nem az lesz benne amit alaõból megadtunk a HTML ben itt a 11  volt megadva
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';           //itt tudnánk javaScript bõl formázni a HTML szöveget
+
+//var x = document.querySelector('#score-0').textContent;                  //itt az X et csak tárolásra hozzuk létre GETTING nek
+//console.log(x);
+
+
+##########################
+##########################
+10. Creating a Game Initialization Function.mp4
+##########################
+##########################
+
+/*
+GAME RULES:
+
+- The game has 2 players, playing in rounds
+- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
+- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
+- The first player to reach 100 points on GLOBAL score wins the game
+
+*/
+
+
+
+var scores, roundScore, activePlayer, dice;
+
+init();
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6 ) + 1;
+
+    // 2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';                                     //visszateszem a képernyõre a kockát
+    diceDOM.src = 'dice-' + dice + '.png';
+
+    // 3. Update the round score if the rolled number was NOT 1
+    if (dice !== 1) {
+        // Add score
+        roundScore += dice;                                             //roundscore = roundscore + dice
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;          
+    } else {
+        // Next player
+        nextPlayer();        
+    }
+});
+
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    // Add CURRENT score to global score, itt adom hozzá a HOLD buttonnal a nagy score hez a pontszámot
+    scores[activePlayer] += roundScore;                                         // ez ezt jelenti scores[activePlayer] = scores[activePlayer] + roundScore;
+
+    // Update the UI
+    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+    // Check if player won the game
+    if (scores[activePlayer]  >= 20) {
+        document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+        document.querySelector('.dice').style.display = 'none';
+        document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');                 //itt a vinner az a CSS ben van definiálva
+        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');              //active a CSS ben van definiálva ott van beállítva hogy piros lesz a betõ is STB
+    } else {
+    // Next player
+    nextPlayer();   
+    }
+
+      
+});
+
+
+//DRY miatt ezt a fügvényt hoztuk létre
+
+function nextPlayer() {
+            // Next player
+            activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+            /*if (activePlayer === 0) {                                     //ez ugyan az mint a felsõ sor csak ternary operatorral a fenti jobb
+                activePlayer = 1;
+            } else {
+                activePlayer = 0;
+            } */
+            roundScore = 0;                                                 //ezzel érem el hogy a az új pörgetés értékét adja hozzá  a current hez nem pedig a masik player teljes összegét
+            
+            document.getElementById('current-0').textContent = '0';         //a currenteket nullázok ki a pörgetés után
+            document.getElementById('current-1').textContent = '0';
+    
+            document.querySelector('.player-0-panel').classList.toggle('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.toggle('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            
+            /*// itt levettem meg vissza raktam az active részt de ezt meg tudom úgy csinálni hogy a toggle t teszem be a remove és az add helyére
+            document.querySelector('.player-0-panel').classList.remove('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.add('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            */
+    
+            document.querySelector('.dice').style.display = 'none';       
+}
+
+document.querySelector('.btn-new').addEventListener('click', init);                    //itt az init a lenti init(); függvényem
+
+
+function init() {
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+
+    document.querySelector('.dice').style.display = 'none';                 //ezzel tüntetem el a kocát az elejárõl a .dice a HTML bõl van a képnél és s display t beállítomnone ra hogy ne jelenítse meg
+
+//ezekkel nullázom le az össszes számot amit a HTML ben példaként megadtam
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
+}
+
+//document.querySelector('#current-' + activePlayer).textContent = dice;    //a querySelector kiválasztja a HTML bõl a current- object et. a textContent pedig a kiiratja a számot tehát nem az lesz benne amit alaõból megadtunk a HTML ben itt a 11  volt megadva
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';           //itt tudnánk javaScript bõl formázni a HTML szöveget
+
+//var x = document.querySelector('#score-0').textContent;                  //itt az X et csak tárolásra hozzuk létre GETTING nek
+//console.log(x);
+
+##########################
+##########################
+11. Finishing Touches State Variables.mp4
+##########################
+##########################
+
+/*
+GAME RULES:
+
+- The game has 2 players, playing in rounds
+- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
+- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
+- The first player to reach 100 points on GLOBAL score wins the game
+
+*/
+
+
+
+var scores, roundScore, activePlayer, dice, gamePlaying;
+
+init();
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    if (gamePlaying) {                                                          //a Gameplyaying et a program leárása végett hoztam létre tehát letiltok minden push és roll gombot
+            // 1. Random number
+    var dice = Math.floor(Math.random() * 6 ) + 1;
+
+    // 2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';                                     //visszateszem a képernyõre a kockát
+    diceDOM.src = 'dice-' + dice + '.png';
+
+    // 3. Update the round score if the rolled number was NOT 1
+    if (dice !== 1) {
+        // Add score
+        roundScore += dice;                                             //roundscore = roundscore + dice
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;          
+    } else {
+        // Next player
+        nextPlayer();        
+    }
+    }
+
+
+});
+
+
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    // Add CURRENT score to global score, itt adom hozzá a HOLD buttonnal a nagy score hez a pontszámot
+
+    if (gamePlaying) {
+        scores[activePlayer] += roundScore;                                         // ez ezt jelenti scores[activePlayer] = scores[activePlayer] + roundScore;
+
+        // Update the UI
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+    
+        // Check if player won the game
+        if (scores[activePlayer]  >= 20) {
+            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');                 //itt a vinner az a CSS ben van definiálva
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');              //active a CSS ben van definiálva ott van beállítva hogy piros lesz a betõ is STB
+            gamePlaying = false;
+    
+        } else {
+        // Next player
+        nextPlayer();   
+        }
+    }     
+});
+
+
+//DRY miatt ezt a fügvényt hoztuk létre
+
+function nextPlayer() {
+            // Next player
+            activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+            /*if (activePlayer === 0) {                                     //ez ugyan az mint a felsõ sor csak ternary operatorral a fenti jobb
+                activePlayer = 1;
+            } else {
+                activePlayer = 0;
+            } */
+            roundScore = 0;                                                 //ezzel érem el hogy a az új pörgetés értékét adja hozzá  a current hez nem pedig a masik player teljes összegét
+            
+            document.getElementById('current-0').textContent = '0';         //a currenteket nullázok ki a pörgetés után
+            document.getElementById('current-1').textContent = '0';
+    
+            document.querySelector('.player-0-panel').classList.toggle('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.toggle('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            
+            /*// itt levettem meg vissza raktam az active részt de ezt meg tudom úgy csinálni hogy a toggle t teszem be a remove és az add helyére
+            document.querySelector('.player-0-panel').classList.remove('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.add('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            */
+    
+            document.querySelector('.dice').style.display = 'none';       
+}
+
+
+document.querySelector('.btn-new').addEventListener('click', init);                    //itt az init a lenti init(); függvényem
+
+
+
+function init() {
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+
+    document.querySelector('.dice').style.display = 'none';                 //ezzel tüntetem el a kocát az elejárõl a .dice a HTML bõl van a képnél és s display t beállítomnone ra hogy ne jelenítse meg
+
+//ezekkel nullázom le az össszes számot amit a HTML ben példaként megadtam
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+    gamePlaying = true;
+
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
+}
+
+//document.querySelector('#current-' + activePlayer).textContent = dice;    //a querySelector kiválasztja a HTML bõl a current- object et. a textContent pedig a kiiratja a számot tehát nem az lesz benne amit alaõból megadtunk a HTML ben itt a 11  volt megadva
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';           //itt tudnánk javaScript bõl formázni a HTML szöveget
+
+//var x = document.querySelector('#score-0').textContent;                  //itt az X et csak tárolásra hozzuk létre GETTING nek
+//console.log(x);
+
+
+##########################
+##########################
+13. Coding Challenge 6 Solution, Part 1.mp4
+##########################
+##########################
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+            <input type="text" placeholder="Final score" class="final-score">;
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+        </div>
+        
+        
+        <!--<script src="app.js"></script>-->
+
+        <script src="challenges.js"></script>
+    </body>
+</html>
+
+
+##
+>>>CSS
+
+/**********************************************
+*** GENERAL
+**********************************************/
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+    background-origin: padding-box;
+
+}
+
+.final-score:focus {outline: none;}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+##
+>>>JS
+
+/*
+GAME RULES:
+
+- The game has 2 players, playing in rounds
+- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
+- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
+- The first player to reach 100 points on GLOBAL score wins the game
+
+*/
+
+
+
+var scores, roundScore, activePlayer, dice, gamePlaying;
+
+init();
+
+var lastDice;           // Ezt a challenge miatt tettem bele ha egy körben 2 hatost dobunk akkor vesztünk
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    if (gamePlaying) {                                                          //a Gameplyaying et a program leárása végett hoztam létre tehát letiltok minden push és roll gombot
+            // 1. Random number
+    var dice = Math.floor(Math.random() * 6 ) + 1;
+
+    // 2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';                                     //visszateszem a képernyõre a kockát
+    diceDOM.src = 'dice-' + dice + '.png';
+
+    // 3. Update the round score if the rolled number was NOT 1
+    if (dice === 6 && lastDice ===6) {
+        //Player looses score
+        scores[activePlayer] = 0;
+        document.querySelector('#score-' + activePlayer).textContent = 0;
+        nextPlayer();
+
+    } else if (dice !== 1) {
+        // Add score
+        roundScore += dice;                                             //roundscore = roundscore + dice
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;          
+    } else {
+        // Next player
+        nextPlayer();        
+    }
+
+
+    }
+
+
+});
+
+
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    // Add CURRENT score to global score, itt adom hozzá a HOLD buttonnal a nagy score hez a pontszámot
+
+    if (gamePlaying) {
+        scores[activePlayer] += roundScore;                                         // ez ezt jelenti scores[activePlayer] = scores[activePlayer] + roundScore;
+
+        // Update the UI
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+        var input = document.querySelector('.final-score').value;                               ///Challenge 2
+        //console.log(input);
+        var winningScore;
+
+        // Undefined, 0, null or "" are Coerced to false
+        // Anything else is COERCED to true
+        if (input) {
+            winningScore = input;    
+        } else {
+            winningScore = 100;
+        }
+    
+        // Check if player won the game
+        if (scores[activePlayer]  >= winningScore) {
+            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');                 //itt a vinner az a CSS ben van definiálva
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');              //active a CSS ben van definiálva ott van beállítva hogy piros lesz a betõ is STB
+            gamePlaying = false;
+    
+        } else {
+        // Next player
+        nextPlayer();   
+        }
+    }     
+});
+
+
+//DRY miatt ezt a fügvényt hoztuk létre
+
+function nextPlayer() {
+            // Next player
+            activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+            /*if (activePlayer === 0) {                                     //ez ugyan az mint a felsõ sor csak ternary operatorral a fenti jobb
+                activePlayer = 1;
+            } else {
+                activePlayer = 0;
+            } */
+            roundScore = 0;                                                 //ezzel érem el hogy a az új pörgetés értékét adja hozzá  a current hez nem pedig a masik player teljes összegét
+            
+            document.getElementById('current-0').textContent = '0';         //a currenteket nullázok ki a pörgetés után
+            document.getElementById('current-1').textContent = '0';
+    
+            document.querySelector('.player-0-panel').classList.toggle('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.toggle('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            
+            /*// itt levettem meg vissza raktam az active részt de ezt meg tudom úgy csinálni hogy a toggle t teszem be a remove és az add helyére
+            document.querySelector('.player-0-panel').classList.remove('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.add('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            */
+    
+            document.querySelector('.dice').style.display = 'none';       
+}
+
+
+document.querySelector('.btn-new').addEventListener('click', init);                    //itt az init a lenti init(); függvényem
+
+
+
+function init() {
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+
+    document.querySelector('.dice').style.display = 'none';                 //ezzel tüntetem el a kocát az elejárõl a .dice a HTML bõl van a képnél és s display t beállítomnone ra hogy ne jelenítse meg
+
+//ezekkel nullázom le az össszes számot amit a HTML ben példaként megadtam
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+    gamePlaying = true;
+
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
+}
+
+//document.querySelector('#current-' + activePlayer).textContent = dice;    //a querySelector kiválasztja a HTML bõl a current- object et. a textContent pedig a kiiratja a számot tehát nem az lesz benne amit alaõból megadtunk a HTML ben itt a 11  volt megadva
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';           //itt tudnánk javaScript bõl formázni a HTML szöveget
+
+//var x = document.querySelector('#score-0').textContent;                  //itt az X et csak tárolásra hozzuk létre GETTING nek
+//console.log(x);
+
+
+##########################
+##########################
+15. Coding Challenge 6 Solution, Part 3.mp4
+##########################
+##########################
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+            <input type="text" placeholder="Final score" class="final-score">;
+            
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+        </div>
+        
+        
+        <!--<script src="app.js"></script>-->
+
+        <script src="challenges.js"></script>
+    </body>
+</html>
+
+
+##
+>>>CSS
+
+/**********************************************
+*** GENERAL
+**********************************************/
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+    background-origin: padding-box;
+
+}
+
+.final-score:focus {outline: none;}
+
+#dice-1 {top: 120px;}
+#dice-2 {top: 250px;}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+##
+>>>challenges.js
+
+/*
+GAME RULES:
+
+- The game has 2 players, playing in rounds
+- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
+- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
+- The first player to reach 100 points on GLOBAL score wins the game
+
+*/
+
+
+
+var scores, roundScore, activePlayer, dice, gamePlaying;
+
+init();
+
+var lastDice;           // Ezt a challenge miatt tettem bele ha egy körben 2 hatost dobunk akkor vesztünk
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    if (gamePlaying) {                                                          //a Gameplyaying et a program leárása végett hoztam létre tehát letiltok minden push és roll gombot
+            // 1. Random number
+    var dice1 = Math.floor(Math.random() * 6 ) + 1;
+    var dice2 = Math.floor(Math.random() * 6 ) + 1;
+
+    // 2. Display the result
+    document.getElementById('dice-1').style.display = 'block';
+    document.getElementById('dice-2').style.display = 'block';
+    //diceDOM.style.display = 'block';                                     //visszateszem a képernyõre a kockát
+    document.getElementById('dice-1').src = 'dice-' + dice1 + '.png';
+    document.getElementById('dice-2').src = 'dice-' + dice2 + '.png';
+
+    // 3. Update the round score if the rolled number was NOT 1
+
+    if (dice1 !== 1 && dice2 !== 1) {
+        // Add score
+        roundScore += dice1 + dice2;                                             //roundscore = roundscore + dice
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;          
+    } else {
+        // Next player
+        nextPlayer();        
+    }
+
+
+    /*
+    if (dice === 6 && lastDice ===6) {
+        //Player looses score
+        scores[activePlayer] = 0;
+        document.querySelector('#score-' + activePlayer).textContent = 0;
+        nextPlayer();
+
+    } else if (dice !== 1) {
+        // Add score
+        roundScore += dice;                                             //roundscore = roundscore + dice
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;          
+    } else {
+        // Next player
+        nextPlayer();        
+    }
+*/
+
+    }
+
+
+});
+
+
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    // Add CURRENT score to global score, itt adom hozzá a HOLD buttonnal a nagy score hez a pontszámot
+
+    if (gamePlaying) {
+        scores[activePlayer] += roundScore;                                         // ez ezt jelenti scores[activePlayer] = scores[activePlayer] + roundScore;
+
+        // Update the UI
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+        var input = document.querySelector('.final-score').value;                               ///Challenge 2
+        //console.log(input);
+        var winningScore;
+
+        // Undefined, 0, null or "" are Coerced to false
+        // Anything else is COERCED to true
+        if (input) {
+            winningScore = input;    
+        } else {
+            winningScore = 100;
+        }
+    
+        // Check if player won the game
+        if (scores[activePlayer]  >= winningScore) {
+            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+            document.getElementById('dice-1').style.display = 'none';
+            document.getElementById('dice-2').style.display = 'none';
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');                 //itt a vinner az a CSS ben van definiálva
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');              //active a CSS ben van definiálva ott van beállítva hogy piros lesz a betõ is STB
+            gamePlaying = false;
+    
+        } else {
+        // Next player
+        nextPlayer();   
+        }
+    }     
+});
+
+
+//DRY miatt ezt a fügvényt hoztuk létre
+
+function nextPlayer() {
+            // Next player
+            activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+            /*if (activePlayer === 0) {                                     //ez ugyan az mint a felsõ sor csak ternary operatorral a fenti jobb
+                activePlayer = 1;
+            } else {
+                activePlayer = 0;
+            } */
+            roundScore = 0;                                                 //ezzel érem el hogy a az új pörgetés értékét adja hozzá  a current hez nem pedig a masik player teljes összegét
+            
+            document.getElementById('current-0').textContent = '0';         //a currenteket nullázok ki a pörgetés után
+            document.getElementById('current-1').textContent = '0';
+    
+            document.querySelector('.player-0-panel').classList.toggle('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.toggle('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            
+            /*// itt levettem meg vissza raktam az active részt de ezt meg tudom úgy csinálni hogy a toggle t teszem be a remove és az add helyére
+            document.querySelector('.player-0-panel').classList.remove('active');   //a HTML class ben az active részt leveszem (kissé szürkébb háttér)
+            document.querySelector('.player-1-panel').classList.add('active');      //és itt pedig a dent levett szürkés hátteret átrakom a player 1 re
+            */
+    
+           document.getElementById('dice-1').style.display = 'none';
+           document.getElementById('dice-2').style.display = 'none';       
+}
+
+
+document.querySelector('.btn-new').addEventListener('click', init);                    //itt az init a lenti init(); függvényem
+
+
+
+function init() {
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+    gamePlaying = true;
+
+    document.getElementById('dice-1').style.display = 'none';
+    document.getElementById('dice-2').style.display = 'none';
+
+//ezekkel nullázom le az össszes számot amit a HTML ben példaként megadtam
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
+}
+
+//document.querySelector('#current-' + activePlayer).textContent = dice;    //a querySelector kiválasztja a HTML bõl a current- object et. a textContent pedig a kiiratja a számot tehát nem az lesz benne amit alaõból megadtunk a HTML ben itt a 11  volt megadva
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';           //itt tudnánk javaScript bõl formázni a HTML szöveget
+
+//var x = document.querySelector('#score-0').textContent;                  //itt az X et csak tárolásra hozzuk létre GETTING nek
+//console.log(x);
+
+
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+5. Advanced JavaScript Objects and Functions																							5. Advanced JavaScript Objects and Functions
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+
+
+
+##########################
+##########################
+4. Creating Objects Function Constructors.mp4
+##########################
+##########################
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Section 5: Advanced JavaScript: Objects and Functions</title>
+    </head>
+
+    <body>
+        <h1>Section 5: Advanced JavaScript: Objects and Functions</h1>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+##
+>>>java
+
+// Function constructor
+
+var john = {
+    name: 'John',
+    yearBirth: 1990,
+    job: 'teacher'
+};
+
+var Person = function(name, yearBirth, job) {
+    this.name = name;
+    this.yearBirth = yearBirth;
+    this.job = job;
+
+    //ezt a calculateAge fügvényt kintebb deklaráljuk a Prototype property miatt
+    /*this.calculateAge = function(){
+        console.log( 2016 - this.yearBirth);
+    }*/
+}
+
+Person.prototype.calculateAge = function() {
+    console.log(2016 - this.yearBirth);
+};
+
+
+
+var john = new Person('John', 1990, 'teacher');
+var jane = new Person('Jane', 1969, 'designer');
+var mark = new Person('Mark', 1948, 'retired');
+
+john.calculateAge();
+jane.calculateAge();
+mark.calculateAge();
+
+// Ha ezzel iratom ki akkor mindegyik new Person nak jane john és mark nak is Smith lesz a neve
+Person.prototype.lastName = 'Smith';
+console.log(john.lastName);
+console.log(jane.lastName);
+console.log(mark.lastName);
+
+
+
+##########################
+##########################
+5. The Prototype Chain in the Console.mp4
+##########################
+##########################
+var x = [2, 4, 6]
+console.info(x) kiírja az array okat indexOf, shift, length stb
+
+
+##########################
+##########################
+6. Creating Objects Object.create.mp4
+##########################
+##########################
+Function Constructor lecture
+
+
+// Object.create
+
+var personProto = {
+    calculateAge: function() {
+        console.log(2016 - this.yearOfBirth);
+    }
+};
+
+var john = Object.create(personProto);
+john.name = 'John';
+john.yearOfBirth = 1990;
+john.job = 'teacher';
+
+var jane = Object.create(personProto,
+    {
+        name: { value: 'Jane'},
+        yearOfBirth: { value: 1969},
+        job: { value: 'designer'}
+    });
+
+
+
+
+
+##########################
+##########################
+7. Primitives vs. Objects.mp4
+##########################
+##########################
+
+// Primitives VS objects
+
+// Primitives
+var a = 23;
+var b = a;
+a = 46;
+console.log(a);     //46 t ot írja ki
+console.log(b);     //23 at írja ki
+
+// Objects
+var obj1 = {
+    name: 'John',
+    age: 26
+};
+var obj2 = obj1;
+obj1.age = 30;
+console.log(obj1.age);
+console.log(obj2.age);
+
+// Functions
+var age = 27;
+var obj = {
+    name: 'Jonas',
+    city: 'Lisbon'
+};
+
+function change(a, b) {
+    a = 30;
+    b.city = 'San Francisco';
+}
+
+change(age, obj);
+
+console.log(age);
+console.log(obj.city);
+
+##########################
+##########################
+8. First Class Functions Passing Functions as Arguments.mp4
+##########################
+##########################
+
+// Lecture: Passing fnctions as arguments
+
+var years = [1990, 1965, 1937, 2005, 1998];
+
+function arrayCalc(arr, fn) {
+    var arrRes = [];
+    for (var i = 0; i < arr.length;
+    i++) {
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el) {
+    return 2016 - el;
+}
+
+function isFullAge(el) {
+    return el >= 18;                    //tru or false lesz emiatt az boolean miatt
+}
+
+function maxHeartRate(el) {
+    if (el >= 18 && el <= 81) {
+        return Math.round(206.9 -(0.67 * el));
+    } else {
+        return -1;
+    }
+}
+
+var ages = arrayCalc(years, calculateAge);
+var isFullAge = arrayCalc(ages, isFullAge);
+var rates = arrayCalc(ages, maxHeartRate);
+
+
+console.log(ages);
+console.log(isFullAge);
+console.log(rates);
+
+
+##########################
+##########################
+9. First Class Functions Functions Returning Functions.mp4
+##########################
+##########################
+
+// Lecture: Function returning functions
+
+//UX = User Experience
+
+function interviewQuestion(job) {
+    if (job === 'designer'){
+        return function(name) {
+            console.log(name + ', can you please explain what UX design is?');
+        }
+    } else if (job === 'teacher') {
+        return function(name) {
+            console.log('What subject do you teach ' + name + '?');
+        }
+    } else {
+        return function(name) {
+            console.log('Hello, what do you do' + name + '?');
+        }
+    }
+}
+
+var teacherQuestion = interviewQuestion('teacher');
+var designerQuestion = interviewQuestion('designer');
+
+teacherQuestion('John');
+designerQuestion('Marta');
+designerQuestion('Mark');
+designerQuestion('John');
+designerQuestion('Mike');
+designerQuestion('Erik');
+
+interviewQuestion('teacher')('Mark');
+
+##########################
+##########################
+10. Immediately Invoked Function Expressions (IIFE).mp4
+##########################
+##########################
+
+/// Lecture: IIFE
+/*
+function game() {
+    var score = Math.random() *10;
+    console.log(score >= 5);
+}
+game();
+*/
+
+(function () {
+    var score = Math.random() *10;
+    console.log(score >= 5);
+}());                                       //ide kell a () jel :)
+
+//console.log(score);
+
+(function (goodLuck){
+    var score = Math.random() *10;
+    console.log(score >= 5 - goodLuck);
+}(5));
+
+
+##########################
+##########################
+11. Closures.mp4
+##########################
+##########################
+
+// Lecture: Closures
+
+function retirement(retirementAge) {
+    var a = ' years left until retirement';
+    return function(yearOfBirth) {
+        var age = 2016 - yearOfBirth;
+        console.log((retirementAge) + a);
+    }
+}
+
+var retirementUS = retirement(66);
+var retirementGermany = retirement(65);
+var retirementIceland = retirement(67);
+
+retirementGermany(1990);
+retirementUS(1990);
+retirementIceland(1990);
+
+//retirement(66)(1990);
+
+
+function interviewQuestion(job) {
+    return function(name) {
+        if (job === 'designer') {
+            console.log(name + ', can you please explain what UX design is?');        
+        } else if (job === 'teacher') {
+            console.log('What subject do you teach ' + name + '?');
+
+        } else {
+            console.log('Hello, what do you do' + name + '?');
+        }
+    }
+}
+
+interviewQuestion('teacher')('John');
+
+##########################
+##########################
+12. Bind, Call and Apply.mp4
+##########################
+##########################
+
+// Lecture: Bind, call and apply
+
+var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    presentation: function(style, timeOfDay) {
+        if (style === 'formal') {
+            console.log('Good ' + timeOfDay + ', Ladies and Gentleman! I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old');
+        } else if (style === 'friendly') {
+            console.log('Hey! What\' up? I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m' + this.age + ' years old. Have a nice ' + timeOfDay);
+        }
+    }
+};
+
+var emily = {
+    name: 'Emily',
+    age: 35,
+    job: 'designer'
+};
+
+john.presentation('formal', 'morning');
+john.presentation.call(emily, 'friendly', 'afternoom');             //itt call methoddal tudjuk meghívni a fenti this eket
+
+//john.presentation.apply(emily, ['friendly', 'afternoom']);
+
+
+// Bind method returned the function
+ var johnFriendly = john.presentation.bind(john, 'friendly');
+
+ johnFriendly('morning');
+ johnFriendly('night');
+
+var emilyFriendly = john.presentation.bind(emily, 'formal');
+emilyFriendly('afternoom');
+
+
+
+
+
+// Régi példát átalakítottuk
+
+
+var years = [1990, 1965, 1937, 2005, 1998];
+
+function arrayCalc(arr, fn) {
+    var arrRes = [];
+    for (var i = 0; i < arr.length;
+    i++) {
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el) {
+    return 2016 - el;
+}
+
+function isFullAge(limit, el) {
+    return el >= limit;                    //tru or false lesz emiatt az boolean miatt
+}
+
+var ages = arrayCalc(years, calculateAge);
+var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+console.log(ages);
+console.log(fullJapan);
+
+##########################
+##########################
+14. Coding Challenge 7 Solution, Part 1.mp4
+##########################
+##########################
+
+//
+//ezt a functiont a végén raktuk bele az IIFI miatt hogy más ne tudja úgymond használni a kódunkat
+(function(){
+    function Question(question, answers, correct) {
+        this.question = question;
+        this.answers = answers;
+        this.correct = correct;
+    }
+    
+    Question.prototype.displayQuestion =
+    function() {
+        console.log(this.question);
+    
+        for (var i = 0; i < this.answers.length; i++) {
+            console.log(i + ': ' +
+            this.answers[i]);
+        }
+    }
+    
+    Question.prototype.checkAnswer =
+    function(ans) {
+        if (ans === this.correct) {
+            console.log('Correct answer!');
+        } else {
+            console.log('Wrong answer! Try again :)');
+        }
+    
+    }
+    
+    var q1 = new Question('IS JavaScript the most coolest programming leanguage in the world?',
+                            
+                                       ['Yes', 'No'],
+                                       0 );
+    
+    var q2 = new Question('What is the name of this course\' teacher?',
+                                        
+                                        ['John', 'MIchael', 'Jonas'],
+                                        2);
+    
+    var q3 = new Question('What does best describe coding?',
+    
+                                        ['Boring', 'Hard', 'Fun', 'Ted'],
+                                        2);
+    
+    var questions = [q1, q2, q3];
+    
+    var n = Math.floor(Math.random() * questions.length);
+    
+    questions[n].displayQuestion();
+    
+    var answer = parseInt(prompt('Please select the correct answer.'));
+    
+    questions[n].checkAnswer(answer);
+})();
+
+
+##########################
+##########################
+15. Coding Challenge 7 Solution, Part 2.mp4
+##########################
+##########################
+
+//ezt a functiont a végén raktuk bele az IIFI miatt hogy más ne tudja úgymond használni a kódunkat
+(function(){
+    function Question(question, answers, correct) {
+        this.question = question;
+        this.answers = answers;
+        this.correct = correct;
+    }
+    
+    Question.prototype.displayQuestion =
+    function() {
+        console.log(this.question);
+    
+        for (var i = 0; i < this.answers.length; i++) {
+            console.log(i + ': ' +
+            this.answers[i]);
+        }
+    }
+    
+    Question.prototype.checkAnswer =
+    function(ans, callback) {
+        var sc;
+
+        if (ans === this.correct) {
+            console.log('Correct answer!');
+            sc = callback(true);
+        } else {
+            console.log('Wrong answer! Try again :)');
+
+            sc = callback(false);
+        }    
+
+        this.displayScore(sc);
+    }
+
+    Question.prototype.displayScore = 
+    function(score) {
+        console.log('Your current score is: ' + score);
+        console.log('-----------------------------');
+    }
+    
+    var q1 = new Question('IS JavaScript the most coolest programming leanguage in the world?',
+                            
+                                       ['Yes', 'No'],
+                                       0 );
+    
+    var q2 = new Question('What is the name of this course\' teacher?',
+                                        
+                                        ['John', 'MIchael', 'Jonas'],
+                                        2);
+    
+    var q3 = new Question('What does best describe coding?',
+    
+                                        ['Boring', 'Hard', 'Fun', 'Ted'],
+                                        2);
+    var questions = [q1, q2, q3];
+
+    function score() {
+        var sc = 0;
+        return function(correct) {
+            if (correct) {
+                sc++;
+            }
+            return sc;
+        }
+    }
+    var keepScore = score();
+
+    function nextQuestion() {
+        
+    
+        var n = Math.floor(Math.random() * questions.length);
+    
+        questions[n].displayQuestion();
+    
+        var answer = prompt('Please select the correct answer.');  
+        
+
+        if (answer !== 'exit') {
+            questions[n].checkAnswer(parseInt(answer), keepScore);
+            nextQuestion();
+        }
+    }
+
+    nextQuestion();
+    
+})();
+
+
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+6. Putting It All Together The Budget App Project																							6. Putting It All Together The Budget App Project
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+######################################################################################################################################################################################
+
+
+
+
+##########################
+##########################
+5. Implementing the Module Pattern.mp4
+##########################
+##########################
+IIFI scope alap standard
+
+var budgetController = (function() {
+     
+    // Some code
+
+})();
+
+
+var UIController = (function() {
+
+    // Some code hier
+
+})();
+
+
+var controller = (function(budgetCtrl, UICtrl) {
+
+
+})(budgetController, UIController);
+
+
+##
+>>>másik standard példával a conlose.log ból
+
+var budgetCalculator = (function() {
+     
+    var x = 23;
+
+    var add = function(a) {
+        return x + a;
+    }
+})();
+
+##
+>>>HTML
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Budgety</title>
+    </head>
+    <body>
+        
+        <div class="top">
+            <div class="budget">
+                <div class="budget__title">
+                    Available Budget in <span class="budget__title--month">%Month%</span>:
+                </div>
+                
+                <div class="budget__value">+ 2,345.64</div>
+                
+                <div class="budget__income clearfix">
+                    <div class="budget__income--text">Income</div>
+                    <div class="right">
+                        <div class="budget__income--value">+ 4,300.00</div>
+                        <div class="budget__income--percentage">&nbsp;</div>
+                    </div>
+                </div>
+                
+                <div class="budget__expenses clearfix">
+                    <div class="budget__expenses--text">Expenses</div>
+                    <div class="right clearfix">
+                        <div class="budget__expenses--value">- 1,954.36</div>
+                        <div class="budget__expenses--percentage">45%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="bottom">
+            <div class="add">
+                <div class="add__container">
+                    <select class="add__type">
+                        <option value="inc" selected>+</option>
+                        <option value="exp">-</option>
+                    </select>
+                    <input type="text" class="add__description" placeholder="Add description">
+                    <input type="number" class="add__value" placeholder="Value">
+                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                </div>
+            </div>
+            
+            <div class="container clearfix">
+                <div class="income">
+                    <h2 class="icome__title">Income</h2>
+                    
+                    <div class="income__list">
+                       
+                        <!--
+                        <div class="item clearfix" id="income-0">
+                            <div class="item__description">Salary</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 2,100.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item clearfix" id="income-1">
+                            <div class="item__description">Sold car</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 1,500.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="expenses">
+                    <h2 class="expenses__title">Expenses</h2>
+                    
+                    <div class="expenses__list">
+                       
+                        <!--
+                        <div class="item clearfix" id="expense-0">
+                            <div class="item__description">Apartment rent</div>
+                            <div class="right clearfix">
+                                <div class="item__value">- 900.00</div>
+                                <div class="item__percentage">21%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item clearfix" id="expense-1">
+                            <div class="item__description">Grocery shopping</div>
+                            <div class="right clearfix">
+                                <div class="item__value">- 435.28</div>
+                                <div class="item__percentage">10%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
+
+##
+>>>CSS
+
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.right { float: right; }
+.red { color: #FF5049 !important; }
+.red-focus:focus { border: 1px solid #FF5049 !important; }
+
+/**********************************************
+*** TOP PART
+**********************************************/
+
+.top {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.budget {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.budget__title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.budget__value {
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget__income,
+.budget__expenses {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.budget__income {
+    margin-bottom: 10px;
+    background-color: #28B9B5;
+}
+
+.budget__expenses {
+    background-color: #FF5049;
+}
+
+.budget__income--text,
+.budget__expenses--text {
+    float: left;
+    font-size: 13px;
+    color: #444;
+    margin-top: 2px;
+}
+
+.budget__income--value,
+.budget__expenses--value {
+    letter-spacing: 1px;
+    float: left;
+}
+
+.budget__income--percentage,
+.budget__expenses--percentage {
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+}
+
+.budget__expenses--percentage {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 3px;
+}
+
+
+/**********************************************
+*** BOTTOM PART
+**********************************************/
+
+/***** FORM *****/
+.add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+
+.add__container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add__type {
+    width: 55px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add__description,
+.add__value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.add__description { width: 400px;}
+.add__value { width: 100px;}
+
+.add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add__btn:active { transform: translateY(2px); }
+
+.add__type:focus,
+.add__description:focus,
+.add__value:focus {
+    outline: none;
+    border: 1px solid #28B9B5;
+}
+
+.add__btn:focus { outline: none; }
+
+/***** LISTS *****/
+.container {
+    width: 1000px;
+    margin: 60px auto;
+}
+
+.income {
+    float: left;
+    width: 475px;
+    margin-right: 50px;
+}
+
+.expenses {
+    float: left;
+    width: 475px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.icome__title { color: #28B9B5; }
+.expenses__title { color: #FF5049; }
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.item__description {
+    float: left;
+}
+
+.item__value {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.item__percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.income .item__value,
+.income .item__delete--btn {
+    color: #28B9B5;
+}
+
+.expenses .item__value,
+.expenses .item__percentage,
+.expenses .item__delete--btn {
+    color: #FF5049;
+}
+
+
+.item__delete {
+    float: left;
+}
+
+.item__delete--btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item__delete--btn:focus { outline: none; }
+.item__delete--btn:active { transform: translateY(2px); }
+
+.item:hover .item__delete--btn { display: block; }
+.item:hover .item__value { transform: translateX(-20px); }
+.item:hover .item__percentage { transform: translateX(-20px); }
+
+
+.unpaid {
+    background-color: #FFDAD9 !important;
+    cursor: pointer;
+    color: #FF5049;
+
+}
+
+.unpaid .item__percentage { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+.unpaid:hover .item__description { font-weight: 900; }
+
+
+##
+>>JS
+
+var budgetController = (function() {
+     
+    var x = 23;
+
+    var add = function(a) {
+        return x + a;
+    }
+
+    return {
+        publicTest: function(b) {
+            return add(b);
+        }
+    }
+})();
+
+
+var UIController = (function() {
+
+    // Some code hier
+
+})();
+
+
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var z = budgetCtrl.publicTest(5);		//Ez csak a teszt miatt volt beírva
+
+    return {
+        anotherPublic: function() {
+            console.log(z);
+        }
+    }
+
+})(budgetController, UIController);
+
+//F12 console be ha ezt beírjuk
+controller.anotherPublic()
+
+akkor látjuk hogy van hozzáférésünk a fenti scope k hez mert átneveztük ezeket
+
+##########################
+##########################
+6. Setting up the First Event Listeners.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    // Some code
+
+})();
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    // Some code hier
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var ctrlAddItem = function() {
+        // 1. Get the field input data
+
+        // 2. Add the item to the budget controller
+
+        // 3. Add the item to the UI
+
+        // 4. Calculate the Budget
+
+        // 5. Display the budget on UI
+        console.log('It works.');
+
+    }
+
+    document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
+        //console.log('Button was clicked.')            //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    })
+
+
+})(budgetController, UIController);
+
+##########################
+##########################
+7. Reading Input Data.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    // Some code
+
+})();
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
+            };
+        },
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var DOM = UIController.getDOMstrings();                                         // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        // 1. Get the field input data
+        var input = UIController.getInput();
+        console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        // 2. Add the item to the budget controller
+
+        // 3. Add the item to the UI
+
+        // 4. Calculate the Budget
+
+        // 5. Display the budget on UI
+        //console.log('It works.');
+
+    }
+
+    document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    })
+
+
+})(budgetController, UIController);
+
+##########################
+##########################
+8. Creating an Initialization Function.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    // Some code
+
+})();
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
+            };
+        },
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        // 1. Get the field input data
+        var input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        // 2. Add the item to the budget controller
+
+        // 3. Add the item to the UI
+
+        // 4. Calculate the Budget
+
+        // 5. Display the budget on UI
+        //console.log('It works.');
+
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+##########################
+##########################
+9. Creating Income and Expense Function Constructors.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals = {
+            exp: 0,
+            inc: 0
+        }
+    };
+
+
+
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
+            };
+        },
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        // 1. Get the field input data
+        var input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        // 2. Add the item to the budget controller
+
+        // 3. Add the item to the UI
+
+        // 4. Calculate the Budget
+
+        // 5. Display the budget on UI
+        //console.log('It works.');
+
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+##########################
+##########################
+10. Adding a New Item to Our Budget Controller.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            // [1 2 3 4 5], next ID =6
+            // [1 2 4 6 8], next ID = 9
+            // ID = last ID + 1
+
+            // Create new ID
+            if(data.allItems[type].lenght > 0) {
+            ID = data.allItems[type][data.allItems[type].lenght -1].id + 1; //itt az elem legutolsó értékét akarjuk visszakapni azért van a avégén a lenght -1, a +1 pedig azért van hogy at egyedu ID meg legyen ahogy fent is van a 9 es nél
+            } else {
+                ID = 0;
+            }
+
+            // Create new item based on 'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+
+            // Push in into our data sructure
+            data.allItems[type].push(newItem);
+
+            // Return the new element
+            return newItem;
+        },
+
+        testing: function() {
+            console.log(data);
+        }
+    };
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
+            };
+        },
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        var input, newItem;
+
+        // 1. Get the field input data
+        input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        // 2. Add the item to the budget controller
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
+        // 3. Add the item to the UI
+
+        // 4. Calculate the Budget
+
+        // 5. Display the budget on UI
+        //console.log('It works.');
+
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+
+##########################
+##########################
+11. Adding a New Item to the UI.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            // [1 2 3 4 5], next ID =6
+            // [1 2 4 6 8], next ID = 9
+            // ID = last ID + 1
+
+            // Create new ID
+            if(data.allItems[type].lenght > 0) {
+            ID = data.allItems[type][data.allItems[type].lenght -1].id + 1; //itt az elem legutolsó értékét akarjuk visszakapni azért van a avégén a lenght -1, a +1 pedig azért van hogy at egyedu ID meg legyen ahogy fent is van a 9 es nél
+            } else {
+                ID = 0;
+            }
+
+            // Create new item based on 'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+
+            // Push in into our data sructure
+            data.allItems[type].push(newItem);
+
+            // Return the new element
+            return newItem;
+        },
+
+        testing: function() {
+            console.log(data);
+        }
+    };
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+        incomeContainer: '.income__list',
+        expensesContainer: '.expenses__list'
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
+            };
+        },
+
+        addListItem: function(obj, type) {
+            var html, newHtml, element;
+            // Create HTML string wuth placeholder text
+
+            if (type === 'inc'){
+                element = DOMstrings.incomeContainer;
+                                                   // ez a HTML kommentes részébõl van lentebb a 0 át átírtam °id°ra        itt a salary t átírtan  % description ra                                itt a + 200XYZ t átyrtam %value% re
+                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">°%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                
+                } else if (type === 'exp') {
+                element = DOMstrings.expensesContainer;
+                                                    // it is ugyan azokat írtam át mint a fenti soron
+                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                }
+
+            // Replace the placeholder text with some actual data
+            newHtml = html.replace('%id%', obj.id);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
+
+
+            // Insert the HTML into the DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        
+        },
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        var input, newItem;
+
+        // 1. Get the field input data
+        input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        // 2. Add the item to the budget controller
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
+        // 3. Add the item to the UI
+        UICtrl.addListItem(newItem, input.type);
+
+        // 4. Calculate the Budget
+
+        // 5. Display the budget on UI
+        //console.log('It works.');
+
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+##########################
+##########################
+12. Clearing Our Input Fields.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            // [1 2 3 4 5], next ID =6
+            // [1 2 4 6 8], next ID = 9
+            // ID = last ID + 1
+
+            // Create new ID
+            if(data.allItems[type].lenght > 0) {
+            ID = data.allItems[type][data.allItems[type].lenght -1].id + 1; //itt az elem legutolsó értékét akarjuk visszakapni azért van a avégén a lenght -1, a +1 pedig azért van hogy at egyedu ID meg legyen ahogy fent is van a 9 es nél
+            } else {
+                ID = 0;
+            }
+
+            // Create new item based on 'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+
+            // Push in into our data sructure
+            data.allItems[type].push(newItem);
+
+            // Return the new element
+            return newItem;
+        },
+
+        testing: function() {
+            console.log(data);
+        }
+    };
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+        incomeContainer: '.income__list',
+        expensesContainer: '.expenses__list'
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
+            };
+        },
+
+        addListItem: function(obj, type) {
+            var html, newHtml, element;
+            // Create HTML string wuth placeholder text
+
+            if (type === 'inc'){
+                element = DOMstrings.incomeContainer;
+                                                   // ez a HTML kommentes részébõl van lentebb a 0 át átírtam °id°ra        itt a salary t átírtan  % description ra                                itt a + 200XYZ t átyrtam %value% re
+                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">°%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                
+                } else if (type === 'exp') {
+                element = DOMstrings.expensesContainer;
+                                                    // it is ugyan azokat írtam át mint a fenti soron
+                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                }
+
+            // Replace the placeholder text with some actual data
+            newHtml = html.replace('%id%', obj.id);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
+
+
+            // Insert the HTML into the DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        
+        },
+
+        clearFields: function(){
+            var fields;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+            fieldsArr = Array.prototype.slice.call(fields);
+
+            fieldsArr.forEach(function(current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArr[0].focus();                                                   //ezzel rakom azt vissza hogy ha beírok valami income vagy excome t akkor az enter után vissza ugrik a kkonzol az Add Description ra
+        },
+
+
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        var input, newItem;
+
+        // 1. Get the field input data
+        input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        // 2. Add the item to the budget controller
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
+        // 3. Add the item to the UI
+        UICtrl.addListItem(newItem, input.type);
+
+        // Clear the fields
+        UICtrl.clearFields();
+
+        // 4. Calculate the Budget
+
+        // 5. Display the budget on UI
+        //console.log('It works.');
+
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+##########################
+##########################
+13. Updating the Budget Controller.mp4
+##########################
+##########################
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            // [1 2 3 4 5], next ID =6
+            // [1 2 4 6 8], next ID = 9
+            // ID = last ID + 1
+
+            // Create new ID
+            if(data.allItems[type].lenght > 0) {
+            ID = data.allItems[type][data.allItems[type].lenght -1].id + 1; //itt az elem legutolsó értékét akarjuk visszakapni azért van a avégén a lenght -1, a +1 pedig azért van hogy at egyedu ID meg legyen ahogy fent is van a 9 es nél
+            } else {
+                ID = 0;
+            }
+
+            // Create new item based on 'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+
+            // Push in into our data sructure
+            data.allItems[type].push(newItem);
+
+            // Return the new element
+            return newItem;
+        },
+
+        testing: function() {
+            console.log(data);
+        }
+    };
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+        incomeContainer: '.income__list',
+        expensesContainer: '.expenses__list'
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: parseFloat(document.querySelector(DOMstrings.inputValue).value)      // Itt a parseFloat írja át az értéket string bõl intiger be
+            };
+        },
+
+        addListItem: function(obj, type) {
+            var html, newHtml, element;
+            // Create HTML string wuth placeholder text
+
+            if (type === 'inc'){
+                element = DOMstrings.incomeContainer;
+                                                   // ez a HTML kommentes részébõl van lentebb a 0 át átírtam °id°ra        itt a salary t átírtan  % description ra                                itt a + 200XYZ t átyrtam %value% re
+                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">°%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                
+                } else if (type === 'exp') {
+                element = DOMstrings.expensesContainer;
+                                                    // it is ugyan azokat írtam át mint a fenti soron
+                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                }
+
+            // Replace the placeholder text with some actual data
+            newHtml = html.replace('%id%', obj.id);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
+
+
+            // Insert the HTML into the DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        
+        },
+
+        clearFields: function(){
+            var fields;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+            fieldsArr = Array.prototype.slice.call(fields);
+
+            fieldsArr.forEach(function(current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArr[0].focus();                                                   //ezzel rakom azt vissza hogy ha beírok valami income vagy excome t akkor az enter után vissza ugrik a kkonzol az Add Description ra
+        },
+
+
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+    var updateBudget = function() {
+        
+        // 1. Calculate the Budget
+        
+        // 2. Return the Budget
+
+        // 5. Display the budget on UI
+    };
+
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        var input, newItem;
+
+        // 1. Get the field input data
+        input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+                    // 2. Add the item to the budget controller
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
+        // 3. Add the item to the UI
+        UICtrl.addListItem(newItem, input.type);
+
+        // 4. Clear the fields
+        UICtrl.clearFields();
+
+        // 5. Calculate the update budget
+        updateBudget();
+
+        //console.log('It works.');
+        }
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+
+##########################
+##########################
+14. Updating the Budget Budget Controller.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var calculateTotal = function(type) {
+        var sum = 0;
+        data.allItems[type].forEach(function(cur){
+            sum += cur.value;
+        });
+        data.totals[type] = sum;
+
+        /*
+        0
+        [200, 400, 100]
+        sum = 0 + 200
+        sum = 200 + 400
+        sum = 600 + 100 = 700
+        */
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+        budget:0,
+        percentage: -1
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            // [1 2 3 4 5], next ID =6
+            // [1 2 4 6 8], next ID = 9
+            // ID = last ID + 1
+
+            // Create new ID
+            if(data.allItems[type].lenght > 0) {
+            ID = data.allItems[type][data.allItems[type].lenght -1].id + 1; //itt az elem legutolsó értékét akarjuk visszakapni azért van a avégén a lenght -1, a +1 pedig azért van hogy at egyedu ID meg legyen ahogy fent is van a 9 es nél
+            } else {
+                ID = 0;
+            }
+
+            // Create new item based on 'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+
+            // Push in into our data sructure
+            data.allItems[type].push(newItem);
+
+            // Return the new element
+            return newItem;
+        },
+
+        calculateBudget: function() {
+
+            // calculate total income and eypenses
+            calculateTotal('exp');
+            calculateTotal('inc');
+
+
+            // calculate the budget income - expenses
+            data.budget = data.totals.inc - data.totals.exp;
+
+            // calculate the percentage of income that we spent
+            if (data.totals.inc > 0) {
+                data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+            } else {
+                data.percentage = -1;
+            }
+
+
+            
+
+            // Expense = 100 and income 300, spent 33.333% = 100/200 = 0.3333 * 100
+        },
+
+        getBudget: function() {
+            return {
+                budget: data.budget,
+                totalInc: data.totals.inc,
+                totalExp: data.totals.exp,
+                percentage: data.percentage
+            };
+        },
+
+
+        testing: function() {
+            console.log(data);
+        }
+    };
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+        incomeContainer: '.income__list',
+        expensesContainer: '.expenses__list',
+        budgetLabel: '.budget__value',
+        incomeLabel: '.budget__income--value',
+        expensesLabel: '.budget__expenses--value',
+        percentageLabel: '.budget__expenses--percentage'
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: parseFloat(document.querySelector(DOMstrings.inputValue).value)      // Itt a parseFloat írja át az értéket string bõl intiger be
+            };
+        },
+
+        addListItem: function(obj, type) {
+            var html, newHtml, element;
+            // Create HTML string wuth placeholder text
+
+            if (type === 'inc'){
+                element = DOMstrings.incomeContainer;
+                                                   // ez a HTML kommentes részébõl van lentebb a 0 át átírtam °id°ra        itt a salary t átírtan  % description ra                                itt a + 200XYZ t átyrtam %value% re
+                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">°%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                
+                } else if (type === 'exp') {
+                element = DOMstrings.expensesContainer;
+                                                    // it is ugyan azokat írtam át mint a fenti soron
+                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                }
+
+            // Replace the placeholder text with some actual data
+            newHtml = html.replace('%id%', obj.id);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
+
+
+            // Insert the HTML into the DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        
+        },
+
+        clearFields: function(){
+            var fields;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+            fieldsArr = Array.prototype.slice.call(fields);
+
+            fieldsArr.forEach(function(current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArr[0].focus();                                                   //ezzel rakom azt vissza hogy ha beírok valami income vagy excome t akkor az enter után vissza ugrik a kkonzol az Add Description ra
+        },
+
+
+
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+    var updateBudget = function() {
+        
+        // 1. Calculate the Budget
+        budgetCtrl.calculateBudget();
+        
+        // 2. Return the Budget
+        var budget = budgetCtrl.getBudget();
+
+        // 3. Display the budget on UI
+        console.log(budget);
+
+    };
+
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        var input, newItem;
+
+        // 1. Get the field input data
+        input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+                    // 2. Add the item to the budget controller
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
+        // 3. Add the item to the UI
+        UICtrl.addListItem(newItem, input.type);
+
+        // 4. Clear the fields
+        UICtrl.clearFields();
+
+        // 5. Calculate the update budget
+        updateBudget();
+
+        //console.log('It works.');
+        }
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+##########################
+##########################
+15. Updating the Budget UI Controller.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var calculateTotal = function(type) {
+        var sum = 0;
+        data.allItems[type].forEach(function(cur){
+            sum += cur.value;
+        });
+        data.totals[type] = sum;
+
+        /*
+        0
+        [200, 400, 100]
+        sum = 0 + 200
+        sum = 200 + 400
+        sum = 600 + 100 = 700
+        */
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+        budget:0,
+        percentage: -1
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            // [1 2 3 4 5], next ID =6
+            // [1 2 4 6 8], next ID = 9
+            // ID = last ID + 1
+
+            // Create new ID
+            if(data.allItems[type].lenght > 0) {
+            ID = data.allItems[type][data.allItems[type].lenght -1].id + 1; //itt az elem legutolsó értékét akarjuk visszakapni azért van a avégén a lenght -1, a +1 pedig azért van hogy at egyedu ID meg legyen ahogy fent is van a 9 es nél
+            } else {
+                ID = 0;
+            }
+
+            // Create new item based on 'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+
+            // Push in into our data sructure
+            data.allItems[type].push(newItem);
+
+            // Return the new element
+            return newItem;
+        },
+
+        calculateBudget: function() {
+
+            // calculate total income and eypenses
+            calculateTotal('exp');
+            calculateTotal('inc');
+
+
+            // calculate the budget income - expenses
+            data.budget = data.totals.inc - data.totals.exp;
+
+            // calculate the percentage of income that we spent
+            if (data.totals.inc > 0) {
+                data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+            } else {
+                data.percentage = -1;
+            }
+
+
+            
+
+            // Expense = 100 and income 300, spent 33.333% = 100/200 = 0.3333 * 100
+        },
+
+        getBudget: function() {
+            return {
+                budget: data.budget,
+                totalInc: data.totals.inc,
+                totalExp: data.totals.exp,
+                percentage: data.percentage
+            };
+        },
+
+
+        testing: function() {
+            console.log(data);
+        }
+    };
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+        incomeContainer: '.income__list',
+        expensesContainer: '.expenses__list',
+        budgetLabel: '.budget__value',
+        incomeLabel: '.budget__income--value',
+        expensesLabel: '.budget__expenses--value',
+        percentageLabel: '.budget__expenses--percentage'
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: parseFloat(document.querySelector(DOMstrings.inputValue).value)      // Itt a parseFloat írja át az értéket string bõl intiger be
+            };
+        },
+
+        addListItem: function(obj, type) {
+            var html, newHtml, element;
+            // Create HTML string wuth placeholder text
+
+            if (type === 'inc'){
+                element = DOMstrings.incomeContainer;
+                                                   // ez a HTML kommentes részébõl van lentebb a 0 át átírtam °id°ra        itt a salary t átírtan  % description ra                                itt a + 200XYZ t átyrtam %value% re
+                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">°%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                
+                } else if (type === 'exp') {
+                element = DOMstrings.expensesContainer;
+                                                    // it is ugyan azokat írtam át mint a fenti soron
+                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                }
+
+            // Replace the placeholder text with some actual data
+            newHtml = html.replace('%id%', obj.id);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
+
+
+            // Insert the HTML into the DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        
+        },
+
+        clearFields: function(){
+            var fields;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+            fieldsArr = Array.prototype.slice.call(fields);
+
+            fieldsArr.forEach(function(current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArr[0].focus();                                                   //ezzel rakom azt vissza hogy ha beírok valami income vagy excome t akkor az enter után vissza ugrik a kkonzol az Add Description ra
+        },
+
+        displayBudget: function(obj) {
+            document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
+            document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
+            document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp;
+            document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage;
+
+            if (obj.percentage > 0) {
+                document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
+            } else {
+                document.querySelector(DOMstrings.percentageLabel).textContent = '---';
+
+            }
+
+        },
+
+
+
+
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+    };
+
+    var updateBudget = function() {
+        
+        // 1. Calculate the Budget
+        budgetCtrl.calculateBudget();
+        
+        // 2. Return the Budget
+        var budget = budgetCtrl.getBudget();
+
+        // 3. Display the budget on UI
+        //console.log(budget);
+        UIController.displayBudget(budget);
+
+    };
+
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        var input, newItem;
+
+        // 1. Get the field input data
+        input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+                    // 2. Add the item to the budget controller
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
+        // 3. Add the item to the UI
+        UICtrl.addListItem(newItem, input.type);
+
+        // 4. Clear the fields
+        UICtrl.clearFields();
+
+        // 5. Calculate the update budget
+        updateBudget();
+
+        //console.log('It works.');
+        }
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            UIController.displayBudget({
+                budget: 0,
+                totalInc: 0,
+                totalExp: 0,
+                percentage: -1
+            });
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+##########################
+##########################
+16. Project Planning and Architecture Step 2.mp4
+##########################
+##########################
+
+
+// BUDGET CONTROLLER
+var budgetController = (function() {
+     
+    var Expense = function(id, description, value) {            
+        this.id = id;
+        this.description = description;
+        this.value = value;        
+    };
+
+    var Income = function(id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var calculateTotal = function(type) {
+        var sum = 0;
+        data.allItems[type].forEach(function(cur){
+            sum += cur.value;
+        });
+        data.totals[type] = sum;
+
+        /*
+        0
+        [200, 400, 100]
+        sum = 0 + 200
+        sum = 200 + 400
+        sum = 600 + 100 = 700
+        */
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+        budget:0,
+        percentage: -1
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            // [1 2 3 4 5], next ID =6
+            // [1 2 4 6 8], next ID = 9
+            // ID = last ID + 1
+
+            // Create new ID
+            if(data.allItems[type].lenght > 0) {
+            ID = data.allItems[type][data.allItems[type].lenght -1].id + 1; //itt az elem legutolsó értékét akarjuk visszakapni azért van a avégén a lenght -1, a +1 pedig azért van hogy at egyedu ID meg legyen ahogy fent is van a 9 es nél
+            } else {
+                ID = 0;
+            }
+
+            // Create new item based on 'inc' or 'exp' type
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+
+            // Push in into our data sructure
+            data.allItems[type].push(newItem);
+
+            // Return the new element
+            return newItem;
+        },
+
+        calculateBudget: function() {
+
+            // calculate total income and eypenses
+            calculateTotal('exp');
+            calculateTotal('inc');
+
+
+            // calculate the budget income - expenses
+            data.budget = data.totals.inc - data.totals.exp;
+
+            // calculate the percentage of income that we spent
+            if (data.totals.inc > 0) {
+                data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+            } else {
+                data.percentage = -1;
+            }
+
+
+            
+
+            // Expense = 100 and income 300, spent 33.333% = 100/200 = 0.3333 * 100
+        },
+
+        getBudget: function() {
+            return {
+                budget: data.budget,
+                totalInc: data.totals.inc,
+                totalExp: data.totals.exp,
+                percentage: data.percentage
+            };
+        },
+
+
+        testing: function() {
+            console.log(data);
+        }
+    };
+})();
+
+/*
+
+// Ezek és lentebb a function constructor TESTT: var exp = new Expense(1, 'Test',100) enter majd exp enter és kiirja az értékeket
+
+var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;        
+};
+*/
+
+// UI CONTROLLER
+var UIController = (function() {
+
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputButton: '.add__btn',
+        incomeContainer: '.income__list',
+        expensesContainer: '.expenses__list',
+        budgetLabel: '.budget__value',
+        incomeLabel: '.budget__income--value',
+        expensesLabel: '.budget__expenses--value',
+        percentageLabel: '.budget__expenses--percentage',
+        container: '.container'
+    };
+
+    return {
+        getInput: function() {                                  
+            return {                                                                // Lentebb is codoljuk ezzel tudjuk ellenõrízni hogy amikir beviszünk egy adatott aztán enter vagy zöld pipa akkobeviszi e
+                type: document.querySelector(DOMstrings.inputType).value,                   // Will be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: parseFloat(document.querySelector(DOMstrings.inputValue).value)      // Itt a parseFloat írja át az értéket string bõl intiger be
+            };
+        },
+
+        addListItem: function(obj, type) {
+            var html, newHtml, element;
+            // Create HTML string wuth placeholder text
+
+            if (type === 'inc'){
+                element = DOMstrings.incomeContainer;
+                                                   // ez a HTML kommentes részébõl van lentebb a 0 át átírtam °id°ra        itt a salary t átírtan  % description ra                                itt a + 200XYZ t átyrtam %value% re
+                html = '<div class="item clearfix" id="inc-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">°%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                
+                } else if (type === 'exp') {
+                element = DOMstrings.expensesContainer;
+                                                    // it is ugyan azokat írtam át mint a fenti soron
+                html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                }
+
+            // Replace the placeholder text with some actual data
+            newHtml = html.replace('%id%', obj.id);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
+
+
+            // Insert the HTML into the DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        
+        },
+
+        clearFields: function(){
+            var fields;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+            fieldsArr = Array.prototype.slice.call(fields);
+
+            fieldsArr.forEach(function(current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArr[0].focus();                                                   //ezzel rakom azt vissza hogy ha beírok valami income vagy excome t akkor az enter után vissza ugrik a kkonzol az Add Description ra
+        },
+
+        displayBudget: function(obj) {
+            document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
+            document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
+            document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp;
+            document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage;
+
+            if (obj.percentage > 0) {
+                document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
+            } else {
+                document.querySelector(DOMstrings.percentageLabel).textContent = '---';
+
+            }
+
+        },
+
+
+
+
+
+        getDOMstrings: function() {                                                 // Ez azért kell hogy lentebb tudjak rá hivatkozni a másik IIFE bõl
+            return DOMstrings;
+        }
+    };
+
+})();
+
+// GLOBAL APP CONTROLLER
+var controller = (function(budgetCtrl, UICtrl) {
+
+    var setupEventListeners = function() {
+        var DOM = UIController.getDOMstrings();
+
+        document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem); // a DOM on keresztül a getDOMstrings en át hivatkozunk a DOMstrings re
+        //console.log('Button was clicked.')                                //ha klikkelünk a zöld pipára akkor a console ba kiírja a cuccost            
+
+    
+
+    document.addEventListener('keypress', function(event) {                 //itt a key az egy beépített cucc az event helyett tetszõlegesen is tudok nevet adni, Keycodes/Charcodes a consol.log alatt itt az enter 13
+        //console.log(event);                                               //Keycodes/Charcodes a consol.log alatt itt az enter 13
+
+        if (event.keyCode === 13 || event.which === 13) {                   // itt az event.keYcode és event.wich tekjesen beépített a 13 az enter az or (||) azért kell mert a régi browser lehet nem ismeri a keyCode s megoldásokat
+            //console.log('ENTER was pressed.');
+            ctrlAddItem();
+
+        }
+    });
+        document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+
+    };
+
+    var updateBudget = function() {
+        
+        // 1. Calculate the Budget
+        budgetCtrl.calculateBudget();
+        
+        // 2. Return the Budget
+        var budget = budgetCtrl.getBudget();
+
+        // 3. Display the budget on UI
+        //console.log(budget);
+        UIController.displayBudget(budget);
+
+    };
+
+
+                                             // Ezzel a DOM az a UICtrl át ami amúgy a UIController tudod hivatkozni a másik IIFE bõl a getDOMstrings re
+
+    var ctrlAddItem = function() {
+        var input, newItem;
+
+        // 1. Get the field input data
+        input = UIController.getInput();
+        //console.log(input);                                                         // consol.log ban kiírja az adatot PL:{type: "exp", description: "88", value: ""}
+
+        if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+                    // 2. Add the item to the budget controller
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
+        // 3. Add the item to the UI
+        UICtrl.addListItem(newItem, input.type);
+
+        // 4. Clear the fields
+        UICtrl.clearFields();
+
+        // 5. Calculate the update budget
+        updateBudget();
+
+        //console.log('It works.');
+        }
+    };
+
+    var ctrlDeleteItem = function(event) {
+        var itemID, splitID, type, ID;
+
+        itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+
+        if (itemID) {
+
+            //inc-1
+            splitID = itemID.split('-');
+            type = splitID[0];
+            ID = splitID[1];
+
+            // 1. Delete the item from the data structure
+
+            // 2. Delete the item from the UI
+            
+            // 3. Update aand show the new budget
+        }
+
+    };
+
+    return {
+        init: function() {                                                          // Ezt azért csináltam hogy a késõbbiekben legyen hozzáférésem a többi IIFE ben ehhez a setupEventListeners hez
+            console.log('Application has started.');                                //Test ként ha elindítom akkor ezt írja ki a console be frissítés után
+            UIController.displayBudget({
+                budget: 0,
+                totalInc: 0,
+                totalExp: 0,
+                percentage: -1
+            });
+            setupEventListeners();
+        }
+    }
+
+})(budgetController, UIController);
+
+controller.init();                                                                  // A fentebbi init functiont írja ki enélkül nincs hozzáférésem a setupEventListeners hez
+
+##########################
+##########################
+19. Deleting an Item from Our Budget Controller.mp4
+##########################
+##########################
+##########################
+##########################
+##########################
+##########################
+##########################
+##########################
+##########################
+##########################
+
+ES6
+
+/////////////////////////////////
+// Lecture: let and const
+
+/*
+// ES5
+var name5 = 'Jane Smith';
+var age5 = 23;
+name5 = 'Jane Miller';
+console.log(name5);
+
+// ES6
+const name6 = 'Jane Smith';
+let age6 = 23;
+name6 = 'Jane Miller';
+console.log(name6);
+
+
+// ES5
+function driversLicence5(passedTest) {
+    
+    if (passedTest) {
+        console.log(firstName);
+        var firstName = 'John';
+        var yearOfBirth = 1990;
+    }
+    
+    
+    console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car.');
+}
+
+driversLicence5(true);
+
+
+// ES6
+function driversLicence6(passedTest) {
+    
+    //console.log(firstName);
+    let firstName;
+    const yearOfBirth = 1990;
+    
+    if (passedTest) {
+        firstName = 'John';
+    }
+    
+    console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car.');
+}
+
+driversLicence6(true);
+
+
+
+var i = 23;
+
+for (var i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+console.log(i);
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Blocks and IIFEs
+
+/*
+// ES6
+{
+    const a = 1;
+    let b = 2;
+    var c = 3;
+}
+
+//console.log(a + b);
+console.log(c);
+
+
+// ES5
+(function() {
+    var c = 3;
+})();
+
+//console.log(c);
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Strings
+
+/*
+let firstName = 'John';
+let lastName = 'Smith';
+const yearOfBirth = 1990;
+
+function calcAge(year) {
+    return 2016 - year;
+}
+
+// ES5
+console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + yearOfBirth + '. Today, he is ' + calcAge(yearOfBirth) + ' years old.');
+
+// ES6
+console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calcAge(yearOfBirth)} years old.`);
+
+
+const n = `${firstName} ${lastName}`;
+console.log(n.startsWith('j'));
+console.log(n.endsWith('Sm'));
+console.log(n.includes('oh'));
+console.log(`${firstName} `.repeat(5));
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Arrow functions
+
+/*
+const years = [1990, 1965, 1982, 1937];
+
+// ES5
+var ages5 = years.map(function(el) {
+    return 2016 - el;
+});
+console.log(ages5);
+
+
+// ES6
+let ages6 = years.map(el => 2016 - el);
+console.log(ages6);
+
+ages6 = years.map((el, index) => `Age element ${index + 1}: ${2016 - el}.`);
+console.log(ages6);
+
+ages6 = years.map((el, index) => {
+    const now = new Date().getFullYear();
+    const age = now - el;
+    return `Age element ${index + 1}: ${age}.`
+});
+console.log(ages6);
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Arrow functions 2
+
+/*
+// ES5
+var box5 = {
+    color: 'green',
+    position: 1,
+    clickMe: function() {
+       
+       var self = this; document.querySelector('.green').addEventListener('click', function() {
+            var str = 'This is box number ' + self.position + ' and it is ' + self.color;
+            alert(str);
+        });
+    }
+}
+//box5.clickMe();
+
+
+// ES6
+const box6 = {
+    color: 'green',
+    position: 1,
+    clickMe: function() {
+        document.querySelector('.green').addEventListener('click', () => {
+            var str = 'This is box number ' + this.position + ' and it is ' + this.color;
+            alert(str);
+        });
+    }
+}
+box6.clickMe();
+
+
+const box66 = {
+    color: 'green',
+    position: 1,
+    clickMe: () => {
+        document.querySelector('.green').addEventListener('click', () => {
+            var str = 'This is box number ' + this.position + ' and it is ' + this.color;
+            alert(str);
+        });
+    }
+}
+box66.clickMe();
+
+
+function Person(name) {
+    this.name = name;
+}
+
+// ES5
+Person.prototype.myFriends5 = function(friends) {
+    
+    var arr = friends.map(function(el) {
+       return this.name + ' is friends with ' + el; 
+    }.bind(this));
+    
+    console.log(arr);
+}
+
+var friends = ['Bob', 'Jane', 'Mark'];
+new Person('John').myFriends5(friends);
+
+
+// ES6
+Person.prototype.myFriends6 = function(friends) {
+
+    var arr = friends.map(el => `${this.name} is friends with ${el}`);
+
+    console.log(arr);
+}
+
+new Person('Mike').myFriends6(friends);
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Destructuring
+
+/*
+// ES5
+var john = ['John', 26];
+//var name = john[0];
+//var age = john[1];
+
+
+// ES6
+const [name, age] = ['John', 26];
+console.log(name);
+console.log(age);
+
+const obj = {
+    firstName: 'John',
+    lastName: 'Smith'
+};
+
+const {firstName, lastName} = obj;
+console.log(firstName);
+console.log(lastName);
+
+const {firstName: a, lastName: b} = obj;
+console.log(a);
+console.log(b);
+
+
+
+function calcAgeRetirement(year) {
+    const age = new Date().getFullYear() - year;
+    return [age, 65 - age];
+}
+
+
+const [age2, retirement] = calcAgeRetirement(1990);
+console.log(age2);
+console.log(retirement);
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Arrays
+
+/*
+const boxes = document.querySelectorAll('.box');
+
+//ES5
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(cur) {
+    cur.style.backgroundColor = 'dodgerblue';
+});
+
+//ES6
+const boxesArr6 = Array.from(boxes);
+Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
+
+
+//ES5
+for(var i = 0; i < boxesArr5.length; i++) {
+    
+    if(boxesArr5[i].className === 'box blue') {
+        continue;
+    }
+    
+    boxesArr5[i].textContent = 'I changed to blue!';
+    
+}
+
+
+//ES6
+for (const cur of boxesArr6) {
+    if (cur.className.includes('blue')) {
+        continue;
+    }
+    cur.textContent = 'I changed to blue!';
+}
+
+
+
+
+//ES5
+var ages = [12, 17, 8, 21, 14, 11];
+
+var full = ages.map(function(cur) {
+    return cur >= 18;
+});
+console.log(full);
+
+console.log(full.indexOf(true));
+console.log(ages[full.indexOf(true)]);
+
+
+//ES6
+console.log(ages.findIndex(cur => cur >= 18));
+console.log(ages.find(cur => cur >= 18));
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Spread operator
+
+/*
+function addFourAges (a, b, c, d) {
+    return a + b + c + d;
+}
+
+var sum1 = addFourAges(18, 30, 12, 21);
+console.log(sum1);
+
+//ES5
+var ages = [18, 30, 12, 21];
+var sum2 = addFourAges.apply(null, ages);
+console.log(sum2);
+
+//ES6
+const sum3 = addFourAges(...ages);
+console.log(sum3);
+
+
+const familySmith = ['John', 'Jane', 'Mark'];
+const familyMiller = ['Mary', 'Bob', 'Ann'];
+const bigFamily = [...familySmith, 'Lily', ...familyMiller];
+console.log(bigFamily);
+
+
+const h = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [h, ...boxes];
+
+Array.from(all).forEach(cur => cur.style.color = 'purple');
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Rest parameters
+
+/*
+//ES5
+function isFullAge5() {
+    //console.log(arguments);
+    var argsArr = Array.prototype.slice.call(arguments);
+    
+    argsArr.forEach(function(cur) {
+        console.log((2016 - cur) >= 18);
+    })
+}
+
+
+//isFullAge5(1990, 1999, 1965);
+//isFullAge5(1990, 1999, 1965, 2016, 1987);
+
+
+//ES6
+function isFullAge6(...years) {
+    years.forEach(cur => console.log( (2016 - cur) >= 18));
+}
+
+isFullAge6(1990, 1999, 1965, 2016, 1987);
+
+
+//ES5
+function isFullAge5(limit) {
+    var argsArr = Array.prototype.slice.call(arguments, 1);
+
+    argsArr.forEach(function(cur) {
+        console.log((2016 - cur) >= limit);
+    })
+}
+
+
+//isFullAge5(16, 1990, 1999, 1965);
+isFullAge5(1990, 1999, 1965, 2016, 1987);
+
+
+//ES6
+function isFullAge6(limit, ...years) {
+    years.forEach(cur => console.log( (2016 - cur) >= limit));
+}
+
+isFullAge6(16, 1990, 1999, 1965, 2016, 1987);
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Default parameters
+
+/*
+// ES5
+function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+    
+    lastName === undefined ? lastName = 'Smith' : lastName = lastName;
+    nationality === undefined ? nationality = 'american' : nationality = nationality;
+    
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationality = nationality;
+}
+
+
+//ES6
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'american') {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationality = nationality;
+}
+
+
+var john = new SmithPerson('John', 1990);
+var emily = new SmithPerson('Emily', 1983, 'Diaz', 'spanish');
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Maps
+
+/*
+const question = new Map();
+question.set('question', 'What is the official name of the latest major JavaScript version?');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+question.set(true, 'Correct answer :D');
+question.set(false, 'Wrong, please try again!');
+
+console.log(question.get('question'));
+//console.log(question.size);
+
+
+if(question.has(4)) {
+    //question.delete(4);
+    //console.log('Answer 4 is here')
+}
+
+//question.clear();
+
+
+//question.forEach((value, key) => console.log(`This is ${key}, and it's set to ${value}`));
+
+
+for (let [key, value] of question.entries()) {
+    if (typeof(key) === 'number') {
+        console.log(`Answer ${key}: ${value}`);
+    }
+}
+
+const ans = parseInt(prompt('Write the correct answer'));
+console.log(question.get(ans === question.get('correct')));
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Classes
+
+/*
+//ES5
+var Person5 = function(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
+
+Person5.prototype.calculateAge = function() {
+    var age = new Date().getFullYear - this.yearOfBirth;
+    console.log(age);
+}
+
+var john5 = new Person5('John', 1990, 'teacher');
+
+//ES6
+class Person6 {
+    constructor (name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+    
+    calculateAge() {
+        var age = new Date().getFullYear - this.yearOfBirth;
+        console.log(age);
+    }
+    
+    static greeting() {
+        console.log('Hey there!');
+    }
+}
+
+const john6 = new Person6('John', 1990, 'teacher');
+
+Person6.greeting();
+*/
+
+
+
+
+/////////////////////////////////
+// Lecture: Classes and subclasses
+
+/*
+//ES5
+var Person5 = function(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
+
+Person5.prototype.calculateAge = function() {
+    var age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+}
+
+var Athlete5 = function(name, yearOfBirth, job, olymicGames, medals) {
+    Person5.call(this, name, yearOfBirth, job);
+    this.olymicGames = olymicGames;
+    this.medals = medals;
+}
+
+Athlete5.prototype = Object.create(Person5.prototype);
+
+
+Athlete5.prototype.wonMedal = function() {
+    this.medals++;
+    console.log(this.medals);
+}
+
+
+var johnAthlete5 = new Athlete5('John', 1990, 'swimmer', 3, 10);
+
+johnAthlete5.calculateAge();
+johnAthlete5.wonMedal();
+
+
+//ES6
+class Person6 {
+    constructor (name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+
+    calculateAge() {
+        var age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+    }
+}
+
+class Athlete6 extends Person6 {
+    constructor(name, yearOfBirth, job, olympicGames, medals) {
+        super(name, yearOfBirth, job);
+        this.olympicGames = olympicGames;
+        this.medals = medals;
+    }
+    
+    wonMedal() {
+        this.medals++;
+        console.log(this.medals);
+    }
+}
+
+const johnAthlete6 = new Athlete6('John', 1990, 'swimmer', 3, 10);
+
+johnAthlete6.wonMedal();
+johnAthlete6.calculateAge();
+*/
+
+
+
+
+/////////////////////////////////
+// CODING CHALLENGE
+
+/*
+
+Suppose that you're working in a small town administration, and you're in charge of two town elements:
+1. Parks
+2. Streets
+
+It's a very small town, so right now there are only 3 parks and 4 streets. All parks and streets have a name and a build year.
+
+At an end-of-year meeting, your boss wants a final report with the following:
+1. Tree density of each park in the town (forumla: number of trees/park area)
+2. Average age of each town's park (forumla: sum of all ages/number of parks)
+3. The name of the park that has more than 1000 trees
+4. Total and average length of the town's streets
+5. Size classification of all streets: tiny/small/normal/big/huge. If the size is unknown, the default is normal
+
+All the report data should be printed to the console.
+
+HINT: Use some of the ES6 features: classes, subclasses, template strings, default parameters, maps, arrow functions, destructuring, etc.
+
+*/
+
+
+class Element {
+    constructor(name, buildYear) {
+        this.name = name;
+        this.buildYear = buildYear;
+    }
+}
+
+
+class Park extends Element {
+    constructor(name, buildYear, area, numTrees) {
+        super(name, buildYear);
+        this.area = area; //km2
+        this.numTrees = numTrees;
+    }
+    
+    treeDensity() {
+        const density = this.numTrees / this.area;
+        console.log(`${this.name} has a tree density of ${density} trees per square km.`);
+    }
+}
+
+
+class Street extends Element {
+    constructor(name, buildYear, length, size = 3) {
+        super(name, buildYear);
+        this.length = length;
+        this.size = size;
+    }
+    
+    classifyStreet () {
+        const classification = new Map();
+        classification.set(1, 'tiny');
+        classification.set(2, 'small');
+        classification.set(3, 'normal');
+        classification.set(4, 'big');
+        classification.set(5, 'huge');
+        console.log(`${this.name}, build in ${this.buildYear}, is a ${classification.get(this.size)} street.`);
+    }
+}
+
+
+const allParks = [new Park('Green Park', 1987, 0.2, 215),
+                 new Park('National Park', 1894, 2.9, 3541),
+                 new Park('Oak Park', 1953, 0.4, 949)];
+
+const allStreets = [new Street('Ocean Avenue', 1999, 1.1, 4),
+                   new Street('Evergreen Street', 2008, 2.7, 2),
+                   new Street('4th Street', 2015, 0.8),
+                   new Street('Sunset Boulevard', 1982, 2.5, 5)];
+
+
+function calc(arr) {
+    
+    const sum = arr.reduce((prev, cur, index) => prev + cur, 0);
+    
+    return [sum, sum / arr.length];
+    
+}
+
+
+function reportParks(p) {
+    
+    console.log('-----PARKS REPORT-----');
+    
+    // Density
+    p.forEach(el => el.treeDensity());
+    
+    // Average age
+    const ages = p.map(el => new Date().getFullYear() - el.buildYear);
+    const [totalAge, avgAge] = calc(ages);
+    console.log(`Our ${p.length} parks have an average of ${avgAge} years.`);
+    
+    // Which park has more than 1000 trees
+    const i = p.map(el => el.numTrees).findIndex(el => el >= 1000);
+    console.log(`${p[i].name} has more than 1000 trees.`);
+    
+}
+
+
+function reportStreets(s) {
+    
+    console.log('-----STREETS REPORT-----');
+    
+    //Total and average length of the town's streets
+    const [totalLength, avgLength] = calc(s.map(el => el.length));
+    console.log(`Our ${s.length} streets have a total length of ${totalLength} km, with an average of ${avgLength} km.`);
+    
+    // CLassify sizes
+    s.forEach(el => el.classifyStreet());
+}
+
+reportParks(allParks);
+reportStreets(allStreets);
+
