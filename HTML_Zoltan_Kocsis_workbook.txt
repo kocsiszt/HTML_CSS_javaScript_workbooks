@@ -1,0 +1,737 @@
+<h1>Cím<h1>
+<h2>kisebb<h2>
+<p>sima szöveg<p>
+
+		<!DOCTYPE html>									//dokumentum typusának a meghatározása									
+		<a href="http://www.google.hu">Google</a>		//Oldal beszúrása
+		<img src="/img/fos.jpg" alt="nincs kép" />		//Kép beszúrás
+		
+<a href="http://www.google.hu" target="_blank">Google</a>	//Újlapon hozza meg a honlapot tartge _black miatt
+		
+		<br />											//Sortörés
+		<hr />											//Sortörés vonallal
+		
+		
+FYI alapértelmezett bwtûtípus: az ARIAL			//Ezeket a CSS ben adjuk meg kivéve az alsó és felsõ indexeket
+<b></b>											//Félkövér (Bold)
+<strong></strong>								//Hasonló kissé erõsebb mint a b
+<i></i>											//Itallic DÕLT
+<code></code>									//Kódos olyan mintha egy p family t adnék rá
+<sub></sub>										//Alsó index itt adom meg nem CSS ben
+<sup></sup>										//Felsõ index itt adom meg nem CSS ben
+<u></u>											//Aláhúzott
+
+
+
+	<a href="másikHtmlReMutasson.html" target="_blank">Másik oldal</a>			//Másik Html re tudok hivatkozni ha vissza akarok akkor a második oldalra is beírom és vissza is tudok lépni
+	<a href="https://www.google.hu" title="Ez a google">Google</a>				//Mikor az egeret ráviszem a linkre akkor egy kis ablak jelenik meg ez a title
+
+
+href="#"										//az index.html en belül szeretnénk linkelni valahova azt jelenti a #
+<a name="fel">Oldal teteje</a> <br />			//Könyvjelzõk az oldalon belöl ezt a négy sort írtam be a body ba a <br /> ek közé és tudok fel le menni itt csak a nameket kell jól megadni
+<a href="#le">Le!</a>
+<a href="#fel">Fel!</a> <br />
+<a name="le">Ez az oldal alja</a>
+
+
+	Ezeket a headbe írjuk
+	<title>Cím</title>							//A Böngészõnek a címe
+	
+	<base href="http://www.google.hu" target="_blank"/>  <!--Alapértelmezett elérési út oldalaknak, képeknek !!!!RITKÁN HASZNÁLJUK!!!!. És ha a body ba ennyit írunk <a href="">Google</a> akkor ez jelenik meg-->
+		<a href="youtube">Google</a>					//Ezt a body ba írjuk és ezzel felül írjuk a href et de a terget et nem írja át
+		target="_self"									//oldalon belül
+		target="_blank"									//Másik oldalon nyílik meg
+		target="_parent"								//Ha framek vannak akkor az összes oldalnak a szülõje tehát a nagy ablakban nyitja meg nem pedig csak a frame ve
+	
+	<link rel="shortcut icon" type="image/jpg/ico/png" href="/img/fos.jpg?v=2"/>  	//<!--ikon. Mit adunk meg? ikon, milyen tipusú, hol van a kép-->
+	<link rel="stylesheet" type="text/css" href="/style.css">						//CSS hivatkozás megadása
+	
+	<meta http-equiv="content-type" content="text/html; charset=UTF8"/>				//Alapbõl meg szokták adni standard UTF8=Karakterkódolás
+    <meta http-equiv="refresh" content="5"/>										//Automatikus oldal frissítés itt 5ms CSET nél jön jól
+	<meta name="keywords" content="html, xhtml, css, tutorial"/>					//Web böngészõk motorjainka segíti a keresést
+    <meta name="description" content="Egyszerû leírás"/>							//Leírás nem kötelezõ felesleges
+	<meta name="author" content="Zoltan Kocsis"/>									//Ki készítette az oldalt
+
+
+<img src="/img/fos.jpg" alt="Nincs kép" title="Sikerült átmennem" width="250px" height="100px">		//Kép beszúrása, nincs kép, title szöveg ha a képre viszem az egeret valamint méretre is szabom
+#####################Egy kép ezer szóval is felér
+
+
+
+	<center>			//Az egész oldal közepére húzza
+	<table border="1">	//Táblázat
+      <tr>
+        <td>1/1</td>
+        <td>1/2</td>
+      </tr>
+	</table>
+	
+	<th></th>					//Table head fejrész. Tulajdonságai:középre igazított van rajta padding félkövér, nagyobb a méretünk !!Ritkán használjuk
+	<td colspan="2">2/1</td>	//Cella egyesítés 2= hány cellát akarunk egyesíteni !Mindid a TD hez írjuk sohasem a tr hez.
+	
+	PL:
+	  <tr>        
+        <td colspan="4">1/1</td>
+      </tr>
+      <tr>
+        <td>2/1</td>
+        <td>2/2</td>
+        <td>2/3</td>
+        <td>2/4</td>
+      </tr>
+	  
+	  
+ <ol>							//Számozott listák
+   <li>Alma</li>
+ </ol>
+	  
+	  
+ <ul>							//Számozatlan listák
+  <li>Ági</li>
+ </ul>
+	  
+ <dl>      						//Definition list dt:amit definiálni fogunk. dd: pedig a definíciója
+  <dt>Kávé</dt>
+   <dd>Fekete ös finom koffein tartalm+ ital</dd>
+      <dt>Tej</dt>
+   <dd>Fehör mézes kávéval isszuk</dd>
+    </dl>
+	  definition list dt:amit definiálni fogunk a dd pedig a definíciója
+	  
+	  
+	  
+				<span></span>				//Arra lett kitalálva hogy szövegeket helyezzünk el benne. Display:Block ha úgy akarjuk kezelni mintha egy div lenne
+	  
+	  
+    <form>																//Formba kell hogy rakjuk
+      Felhasználónév: <input type="text" name="username">				//Felhasználónév ez sima text típusú	
+      Password: <input type="password">									//Jelszó ez kipontozza a beírt jelszót
+      E-mail <input type="email"> <br /> 								//Email címeknél a type nél lehet text is mindegy	
+      
+	  Rádió gombok: <input type="radio" name="radio1">					//Kör gombok mint a CISCO vizsgánál alatta ha még rakunk akkor tudunk többet is emgymás mellé vagy alá tenni
+      <input type="radio" name="radio1">								//ez és
+      <input type="radio" name="radio1"> <br />							//ez a fenti kör gyombhoz tartoznak
+      
+	  ChackBoxok: <input type="checkbox" name="chack1">					//Kocka gombok CISCO vizsgán a több helyes válasz van nál vannak ilyenek
+      <input type="checkbox" name="chack1">								//ez és
+      <input type="checkbox" name="chack1"> <br />						//ez is a kocka gombok hoz tartozik
+	  
+      SimaGomb: <input type="button" value="Sima Gomb">    				//Sima gomb mint a Jonas os tutorialokban
+	  
+      Submi gomb: <input type="submit" value="Submit Gomb">				//Valami visszejelzés ado itt ha submittáljuk akkor frissül az oldalunk. Regisztrációhoz is kellhet
+  </form>
+  
+		<button>Sima gomb 2</button> <br />								//Es is sima gomb mint a Jonas os tutorial ban csak ez form on kívül van
+	  
+	  
+	  
+	 !!!!iframet a head be írjuk 
+<iframe id="frame1" src="https://hu.wikipedia.org/wiki/I._M%C3%A1ty%C3%A1s_magyar_kir%C3%A1ly" frameborder="0"></iframe>	//Oldal az oldalban a frameborder az a keret a frame nél
+		
+		youtube videó beszúrása : videót megkeressük elindítjuk majd lentebb a like gomb mellett: megosztás/beágyazás/copy és az egészet bemásoljuk a head be
+PL    <iframe width="860" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	  
+	  
+														FRAMEK !!!!!!!!nem a body ba!!! vagy head után egybõl, vagy head ba
+		<frame>							//elhelyezzük a frameket 
+		<frameset>						//elhelyezzük a sorokat és az oszlopokat
+	  
+								//Ez a mátyás királyos amikor 3 kimásolt vikipédiát raktam 1 oldalra
+	<frameset rows="50%, *">	!!SOROKBAN OSZTOM 3 részre
+      <frame src="https://hu.wikipedia.org/wiki/I._M%C3%A1ty%C3%A1s_magyar_kir%C3%A1ly" name="lap1" />
+      <frameset cols="50%, *">
+        <frame src="https://hu.wikipedia.org/wiki/II._Ul%C3%A1szl%C3%B3_magyar_kir%C3%A1ly" name="lap2">
+        <frame src="https://hu.wikipedia.org/wiki/Teleki_P%C3%A1l_(politikus)" name="lap3">
+      </frameset>
+    </frameset>
+	
+								!!Oszlopban osztom 3 részre
+	  
+	    <frameset cols="25%, *, 25%">
+    <frame src="https://hu.wikipedia.org/wiki/I._M%C3%A1ty%C3%A1s_magyar_kir%C3%A1ly" name="lap1"/>
+    <frame src="https://hu.wikipedia.org/wiki/II._Ul%C3%A1szl%C3%B3_magyar_kir%C3%A1ly" name="lap2"/>
+    <frame src="https://hu.wikipedia.org/wiki/Teleki_P%C3%A1l_(politikus)" name="lap3"/>
+  </frameset>
+	  
+	  
+	  
+	  
+	  
+Google keresõt beleteszem az oldaba
+
+  <body>
+    <form action="https://www.google.com/search" method="GET">
+    <input type="text" name="q" placeholder="Google Search">				<!--ahova írom a keresendõ szöveget oda kerül be ez a Google Search felirat-->
+    <input type="submit" value="Google Search">								<!--Submit fentebb van de olyan ez mint egy button-->
+  </form>
+  </body>
+	  
+	
+
+	
+Entities Speciális karakterek
+PL:
+&rarr; vagy &#169;
+&times; 				//bezárós X
+&nbsp;					//Szóköz
+
+
+	 Emmet a html nél mikor írjuk a tetszik cuccost
+
+lorem 									//Lorem html ben szövegbeillesztés
+
+
+
+
+        <section class="section-stories">									<!--videó beillesztése mp4/webm-->
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="/img/video.mp4" type="video/mp4">
+                    <source src="/img/video.webm" type="video/webm">
+                    Your Browser is not Supported!
+                </video>
+            </div>
+
+
+
+<form action="#" class="form">											 	<!--email es rész amikor a full name és az email cím van-->
+        <div class="form__group">
+        <input type="text" class="form__input" placeholder="Full name" id="name" required>
+        <label for="name" class="form__label">Full name</label>
+        </div>
+
+        <div class="form__group">
+        <input type="email" class="form__input" placeholder="Email address" id="email" required>
+        <label for="email" class="form__label">Full name</label>
+        </div>
+
+
+
+			 
+			                    <div class="form__group">					<!-- Radio buttom name="size" nagyon fontos hogy egyforma nevet kell megadni !!!ezt a buttom ot nem lehet formázni CSS ben-->
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">Small tour group</label>
+                                </div>
+
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">Small tour group</label>
+                                </div>
+								
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Coctact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built ma <a href="#" class="footer__link">Jonas Schmedtmann & Zoltan Kocsis</a> for this online course <a href="#" class="footer__link">Advanced CSS an Sass</a>Copyright &copy; by Jonas Schmedtmann. You are 100% allwed to use this webpage for both personal and commertial use, but NOT claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
+                </p>
+            </div>
+        </div>
+    </footer>
+	
+	
+	
+	
+	
+	
+//resolution scrrensize ez e legjobb
+<img srcset="img/logo-green-2x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">		//képek beszúrása az 1x kisebb a 2x nagyon 2x = 1px kettõ helyet foglal el
+	
+	
+	
+	//Art direction al
+	    <picture class="footer__logo">
+             <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+            <img srcset="img/logo-green-2x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">
+        </picture> 
+		
+	
+
+	
+//Harmadik módszer a kép resolution ra	
+        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+        alt="Photo 1"
+        class="composition__photo composition__photo--p1"
+        src="img/nat-1-large.jpg">     <!--171/900=0.19 = 20vw, 171/600=0.285=30.  a 300px itt a default size-->
+	
+
+
+
+	
+	
+	
+	
+	
+!!!!!!!!!!!!!!!!!!!!!!!<meta name="viewport" content="width=device-width, initial-scale=1.0"> ennek benne kell lennie az index.html.ben hogy mûködjon a respond phone tablet kompatiobilitás stb!!!!!!!!!
+
+
+
+
+//alap basic HTML project ezdésnél
+	<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>trillo &mdash; Your all-in-one booking app</title>
+    </head>
+    <body>
+		TEST
+    </body>    
+</html>
+
+
+
+
+//icommon ikon ocon beszúrás !!!!xlink csak webszerveren mûködik
+
+                        <svg class="search__icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+
+
+
+
+
+
+	
+	
+	
+<html>
+<head>
+</head>
+<body>
+</body>
+<main>
+</main>
+	
+	
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+HTML #15 - Táblázatok.mp4
+
+<html>
+  <head>    
+  </head>
+    <body>
+      <center>
+      <table border="1" bordercolor="red" width="80%">
+        <tr>
+          <th>Fejrész 1</th>
+          <th>Fejrész 2</th>
+        </tr>
+      <tr>
+        <td width="40%" rowspan="2"> Elsõ sor elsõ oszloop!</td>
+        <td width="60%">Második sor Második oszlop!</td>
+      </tr>
+      <tr>
+        <td width="60%">Második sor Második oszlop</td>
+      </tr>
+        
+      <tr>
+        
+        <!--
+        <td colspan="2"> <h1>Horse</h1> <img src="horse.jpg" alt="A kép nem jeleníthetõ meg!" /> </td>
+        -->
+
+        <!--
+        <td width="40%"><h1>Horse<h1></td>
+        <td width="60%"><img src="horse.jpg" alt="Kép betöltése sikertelen!"/></td>
+        -->
+        
+      </tr>
+       </table>
+        </center>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HTML #16 - Listák.mp4
+
+
+
+
+<html>
+  <head>
+      <title>HTML</title>
+  </head>
+  <body>
+    <dl>
+      <dt>Kávé</dt>
+        <dd>Fekete és finom koffein tartalmú ital</dd>
+      <dt>Tej</dt>
+        <dd>Fehér mézes kávéval isszuk</dd>
+    </dl>
+    
+    <ul>
+      <li>Anna</li>
+      <li>Brigi</li>
+      <li>Ági</li>
+      <li>Fanni</li>
+      <li>Regi</li>
+    </ul>
+    
+    <ol>
+      <li>Alma</li>
+      <li>Barack</li>
+      <li>Körte</li>
+      <li>Szilva</li>
+      <li>Paradicsom</li>
+    </ol>
+    
+    
+  </body>
+</html>
+
+
+
+
+HTML #17 - Div Span.mp4
+div: block tipusú menüket szerkesztünk benne
+span: csak szöveg
+
+
+
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <div style="background-color:red; width:200px; height:200px">
+      
+    </div>
+    <span style="background-color:yellow; width:200px; height:200px; display:block;">
+      asddfgfdg
+    </span>
+    <span style="background-color:orange;">
+      klkkkkkkkkkkkkk
+    </span>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HTML #18 - Layout.mp4
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cím</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="elso">
+      <div id="masodik">
+        <h1>Ide jön a cím</h1>
+      </div>
+      <div id="menu">
+        <b>Menu</b> <br />
+        <ul>
+          <li>Html (HTML5)</li>
+          <li>CSS</li>
+          <li>Html (CSS3)</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>Ajax</li>
+        </ul>        
+      </div>
+      <div id="menu2">
+        <p>A tartalom jön ide</p>
+      </div>
+      <div id="megjegyzes">
+        <p>A megjegyzes jön ide</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+div#elso{
+    width: 600px;
+    height: 400px;
+}
+
+div#masodik{
+    width: 600px;
+    text-align: center;
+    height: 50px;
+    background-color: red;
+    
+}
+
+div#menu{
+    width: 200px;
+    height: 300px;
+    float: left;
+    background-color:yellow;
+}
+
+
+div#menu2{
+    width: 400px;
+    height: 300px;
+    float: left;
+    background-color: gray;
+}
+
+div#megjegyzes{
+    width: 600px;
+    height: 50px;
+    float: left;
+    background-color: orange;
+    clear: both
+
+}
+
+
+
+
+
+
+HTML #19 - Ûrlapok.mp4
+
+
+
+<html>
+  <head>
+    <title>HTML</title>
+  </head>
+  <body>
+    <form action="registration.php" method="post">
+      Felhasználónév: <input type="text" /> <br />
+      Jelszó: <input type="password" /> <br />
+      E-mail <input type="email" /> <br/>
+      Rádió gombok:
+      <input type="radio" name="radio1" />
+      <input type="radio" name="radio1" />
+      <input type="radio" name="radio1" /> <br />
+      ChecBoxok:
+      <input type="checkbox" name="cha" />
+      <input type="checkbox" name="cha" />
+      <input type="checkbox" name="cha" /> <br />
+      SimaGomb:
+      <input type="button" value="Sima Gomb" /> <br />     
+    </form>
+    <button>Sima Gomb2</button> <br />
+    SubmitGomb
+    <input type="submit" value="Submit Gomb" />
+	
+	<a href="#" class="btn-text">Learn more &rarr;</a>						//Sima linkes button
+  </body>
+</html>
+
+
+
+
+HTML #20 - iframe.mp4
+
+
+
+<html>
+  <head>
+    <title>HTML</title>
+    <body>
+      <iframe src="https://hu.wikipedia.org/wiki/I._M%C3%A1ty%C3%A1s_magyar_kir%C3%A1ly" frameborder="0"; width="800"; height="900"></iframe>
+    </body>
+  </head>
+</html>
+
+
+
+
+HTML #21 - Framek.mp4
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML</title>
+  </head>
+  <frameset rows="50%, *">
+    <frame src"frame_a.html"/>
+    <frameset cols="50%, *">
+      <frame src"frame_b.html"/>
+      <frame src"frame_c.html"/>      
+    </frameset>
+  </frameset>
+</html>
+
+
+##
+>>2
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML</title>
+  </head>
+    <frameset cols="25%,*,25%">
+      <frame src="frame_a.html" name="lap1"/>
+      <frame src="frame_b.html" name="lap2"/>
+      <frame src="frame_c.html" name="lap3"/>
+    </frameset>
+
+</html>
+
+
+
+
+
+
+
+HTML #22 - Speciális Karakterek.mp4
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML</title>
+  </head>
+  <body>
+    &hearts; <br />
+    &para; <br />
+    &#36; <br />
+    &rarr;
+  </body>
+</html>
+
+
+HTML #23 - Script és Styling.mp4
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML</title>
+    <style>
+      #alma{
+        color:red;
+        font-family: gabriola;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="alma">Alma</h1>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML</title>
+    <script type="text/javascript">
+      document.write("Ezt a szöveget a JavaScript írta.")   
+    </script> <br /> 
+    <script type="text/javascript">
+      document.write(6+6);
+    </script>
+    <style>
+      #alma{
+        color:red;
+        font-family: gabriola;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="alma">Alma</h1>
+  </body>
+</html>

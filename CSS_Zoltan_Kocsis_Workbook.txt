@@ -1,0 +1,1303 @@
+CSS Cascading Style Sheet: egymásba ágyazott styluslapok, a különbözõ szelektorok egymásból örököltethetõ
+szelektor
+property
+value
+
+
+
+
+rgba: alfa érték az uccsú szám az occupaci
+
+
+	text-align: center; 		középre igazít
+	text-align: justify;		sorkizárt
+	vertical-align: center;		függõlegesen igazítja középre
+    padding: 15px;				belsõ kitöltés								padding:5px 10px 15px 20px;	//Óra járásával megegyezõ irányban	padding:5px 10px;	//fent és lent és jobbról balról		
+    margin: 20px;				külsõ eltérés tehát beljebb lesz a cucc, 	margó vagy eltartás	margin: 5px 10px 15px 20px;	//Óra járásával megegyezõ irányban	margin:5px 10px;	//fent és lent és jobbról balról
+
+//ha mindent középre akarunk igazítani flexbox al
+	    
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	
+	
+div doboz alapból block típusú
+div#box				szélesség magasság és background color mindig kell hozzá
+
+	1.margin
+	2.Outline		//margin és a border közötti rész
+	3.Border
+	
+Block__element--modifier
+
+p automatikusan inline
+
+    position: fixed;			//a képe mindig ott marad ha görgetem is
+	
+	position: relative;			//ezt csak így lehet megadni
+    left: 200px;
+    top: 200px;
+	
+	absolute vs relatív			//absolute az egyikben benne van az alapértelmezett padding absolute= az elsõ olyanhoz viszonyítja ami relatív volt
+
+
+ <img src="/images/1_boxmodell/image1.jpg" alt="" />
+    <p class="username">zoli</p>
+    <p>I like to hhhasdf &lt;  &gt; &copy;</p>
+    <a href="/images/1_boxmodell/image2.jpg" download="">letölt</a>
+    <a href="#css3">css3ravisz</a>
+    <a href="https://www.google.com" target="_blank">google</a>
+    <a href="mailto:kocsiszt@gmail.com">email</a>
+
+
+
+hivatkozás
+általános 			//PL:h1
+osztály Class:  .	//egy elem kijelölése, több dologra szokás megadni(az osztályba több gyerek is jár)
+ID :# 				// ID vel egyre hivatkozunk csak
+
+    background-color: #000;
+    background-image: url(/img/fos.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;  
+			ez az egész egy sorban	background: #000 url(/img/fos.jpg) no-repeat center;
+
+text-transform: capitalize; /Uppercase
+text-indent: 100px;					//bentebb kezdi a bekezdést
+line-height: 200%					//sortávolság
+text-decoration: none;				//aláhúzás eltüntetése
+
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;           /*döntve*/
+    font-size: 24px;
+    font-weight: 900;             /*félkövér*/
+
+
+a:link				//még nem látogattunk meg az oldalt tehát nem kattintottam rá				PSEUDO class :
+a:visited			//a már meglátogatott, rákattintott oldal
+a:hover				//rámutatok az egérrel
+a:active			//amikkor éppen rákattintok
+
+	list-style: none;							//minden stílust levesz a style ról
+	list-style-type: circle;					//a felsorolás jelét írom át vele
+	list-style-image: url(/img/fos.jpg);		//képet tudok a felsoroláshoz beszúrni
+
+ul.a {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+ul.a li {
+    border: 1px solid black;
+}
+
+ol.a {								//felsorolás számozás			OL és nem UL
+    list-style-type: upper-roman;	//római számokká alakítja
+}
+
+    
+
+	
+	html {
+		font-size: 62.5%;				//ez definiálja mennyi 1 rem ez default a világon :)
+	}
+	
+
+
+	border-collapse: collapse;			//excell es egy vonal van a kettõ helyett ha táblázatot csinálok a HTML ben
+
+
+
+
+margin-left: auto;				//ezzel a kettõvel középre igazítja a cussost és a div et is
+margin-right: auto;
+height: auto;					//div nél ha auto akkor amit beleírunk szöveget annyival fogja növelni a margint vagy a kitöltést
+
+    border-style: dotted;				//szaggatott doboz
+    border-top-style: groove;			//csak a fenti része más ez a négy sor így is leírható: border: 3px solid red;
+    border-width: 5px;
+    border-color: red;
+
+
+outline-width: 5px;
+outline-color: yellow;
+outline-style: dotted;
+
+
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	
+max-width: 300px;					//sima height ha kisebb akkor kisebb lesz de ha nagyon a sima akkor max csak 300px lesz
+min-height: 250px;					//ez ugyan az mint a felsõ sor csak ellenkezõleg
+
+
+	p.hide:hover{					//mikor az egeret ráviszem akkor tûnik el
+		visibility: hidden;
+	}
+	
+display: none;						//itt teljesen eltûnik a paragrafus opacity tehát nem 0 és nem marad meg a helye
+
+    overflow: scroll;				//görgetõs cuccos
+	
+cursor: crosshair;					//célkereszters pointer		move, ne-resize, nw-resize, text, wait, help
+
+
+    float: left;					//a kép mellé tõl rakja az írást, és et tudjuk mellé rakni a többinál is amennyit csak akarunk :)
+	clear: both;					// megszünteti a float ot a ami a both után van
+
+ul#list li:first-child {			// itt a legelsõ illetve e lefutolsó last adható meg
+ul#list li:nth-child(2) {			// itt az elsõ és az utolsó elemek között tudjuk kiválasztani id megadása nélkül. Itt az elsõ az elsõ elem nem pedig 0 absolute.
+p:first-line{						// elsõ sort tudjuk változtatni a többi sor marad
+
+
+
+	background-color: rgba(0, 0, 0, 0.5);		//rgba 0.5opacity
+	
+	
+border: 5px solid red;				//keret
+	
+	
+/////////////////////////////////////////////////////CSS3 Dregshut
+
+
+
+transform: rotate(30deg);						//elforgatás
+
+    border-radius: 10px 15px 20px 30px;			//sima sarok lekerekítés
+	border-top-left-radius: 10px;				//egy sarok kerekítás csak, PL ez: fent bal	
+	
+box-shadow: 2px 3px 5px #000;           		//X jobbratolódás méréke, Y lefelé mérték, árnyék szóródása, és a szín
+
+    border-image: url(/img/fos.jpg) 40 40 round;	//a szöveg köré teszen a képet 
+
+
+
+
+background: url(/img/css_flow.jpg);				//a szöveg mögé teszek be egy képet
+background-repeat: no-repeat;
+
+background-size: 500px 700px ;
+
+
+	background-origin: content-box;				//nem nagyon vágom mi ez
+
+
+background-image: url(/img/css_flow.png), url(/img/fos.jpg);	//két képet egymásba teszünk, PNG kell elsõnek mert az transzparens
+
+
+	background: linear-gradient(to right bottom, #1e5799 60%, #7db9e8 80%);				//átúsztatás, a % a kezdetet jelenti ha kivesszük belõle akkor is jó
+	background: linear-gradient(to right bottom, #1e5799, #fff, red, green, #7db9e8);	//több szín
+	
+
+text-shadow: 3px 5px 5px #ff0000 ; /jobbra mennyire legyen, mennyire legyen lent az árnyék, és elmosási érték, és egy szín
+
+	word-wrap: break-word;			//Szöveg tördelése
+	word-break: break-all;			//UA mint a fenti sor de a fenti jobb ez csak említés végett van itt
+	
+transform:translate(50px, 100px) ;	//2D pozicionálás
+transform: rotate(45deg);			//csak simány 45fokkal fordítja el
+transform: scale(2);				//kétszeresére növeli az aktuális DIV et 0.5 is lehet ;)
+transform: skew(30deg, 4deg);		//az alakot tudjuk vele formázni
+
+
+
+
+######################################Innentõl van a Jonas os Natours project
+
+
+
+	
+
+				$color-primary: #f9ed69;			//Színkód amire késõbb tudunk hivatkozni
+
+
+
+@mixin clearfix { 					//Ezekre a beállításokra @include val tudunk givatkozni, a clearfix nevet azt tetszés szerint bármire átírhatjuk, az adott div, id, vagy class alatt ennyi csak @include clearfix;
+  &::after{
+  content: "";
+  clear: both;
+  display: table;
+  }
+}
+	
+div#nav{
+  @include clearfix;
+}	
+	
+
+
+@mixin style-link-text($color) {			//Ez a  mixin pedig kap egy variálható argumentumot vagyis értéket, itt color akár mi lehet, olvass lentebb tovább
+  text-decoration: none;
+  text-transform: uppercase;  
+  color: $color;
+}
+	
+	
+@include style-link-text($color-primary);		//így adjuk meg mint a sima mixin t csak annnyi hogy ha a fenti kódot ide zárójelbe beírjuk akkor a fentebbi $color ok helyére berakja
+
+
+				background-color: darken($color-secondary, 15%);				//15% al sötétíti a színt
+				background-color: lighten($color-tertiary, 10%);				//10 % al világosítja a színt
+				
+
+@function fugveny($a, $b) {				//Függvény UA mint javascript be és python ban
+  @return $a / $b;
+}
+
+nav{
+  margin: fugveny(60, 2) * 1px;				//a *1px azért kell hogy a margint tudja hogy pixelben akarjuk megadni
+}
+
+
+
+				%btn-placeholder {								//Ezekre tudunk hivatkozni egyben egy sorban a btn-placeholder bármi lehet
+				  padding: 10px;
+				  display: inline-block;
+				  text-align: center;
+				  border-radius: 100px;
+				  width: $width-button;  
+				  @include style-link-text($color-text-light);
+				  
+				  
+				@extend %btn-placeholder;						//Csak ennyit írunk be a div, id, vagy class alá.
+
+
+
+
+font-weight: 700;												//Bold félkövér
+
+
+				
+nesting: &__logo-box rövidítéses cucc
+
+		& neve angolul: ampersand
+		
+scss: 7/1 
+
+		main.scss												//ez a fõ sass file ebbe kell importálni minden az file t az al scss mindig _ kezdõdik!!
+		@import "/sass/base/base"								//a _base.scss file importálása a FÕ _main.scss az összeset így kell össze vissza fogadja csak el
+			@import '../sass/base/base';						//van hogy csak így két ponttal(..) az elején, ha így sem emgy akkor így @import '../sass/base/_base.scss'; próbálni
+
+			
+			
+&:not(:last-child) {}											//ennek a jelentése mindet az utolsót !!!!Kivéve!!!!
+
+
+
+
+					clear: both;								//Float left and right a jelentése
+					
+					
+
+@mixin clearfix {					//a clearfix tetszõlegesen megadható
+    &::after{
+        content: "";				//ne írjunk ki semmit sem
+        display: table;				//tábla szerkezetû legyen
+        clear: both;				//Float left and right a jelentése
+    }								//Megadása lentebb
+}
+
+
+ @include clearfix;					//ennyi a megadása a pl .row{} ban
+ 
+ 
+ 
+ 
+ [class^="col-"] {}                   	//Atribute selector a class ból ami col-al !!!!Startkezdõdik!!!! 
+ 
+ [class*="col-"] {}	              		//válassz ki minden class t ami a "" ban !!!!tartalmaz!!!! itt col-
+ 
+ [class$="col-"] {}						//válaszd ki a class ból ami col- ra !!!!!végzõdik!!!!
+ 
+	PL:
+	    [class^="col-"] {                   
+        background-color: orangered;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }  
+ 
+ clip-path: polygon(0 0 , 100% 0, 100% 75vh, 0 100%);				//A trapéz megrajzolása
+ 
+ margin-top: -20vh;													//marad ki % a poligon miatt ezért az alatta lévõ div be vagy main be margint top al berakunk -20vh t és így kitölti az egészet
+
+ 
+.section-features 													//Másik megoldás aclip path ra
+    margin-top: -11rem;
+    transform: skewY(-7deg);
+
+    & > *{
+        transform: skewY(7deg);
+ 
+ 
+			    background-image: linear-gradient(to right, $color-rimary-light, $color-primary-dark);		//Színt adok a betûnek kivágok a hátteret és a betû lesz ilyen színû
+				display: inline-block;																		//Ezzel csak addig szinezik ki ameddig a szöveg van
+				-webkit-background-clip: text;
+				color: transparent;
+				
+				
+				
+ 
+ transform: skewY(2deg) skewX(15deg); vegy transform: skewY(5deg);				//Y tengeyen 5 fokkal donti meg !!!!ha már van egy Transform akkor mögé kell berakni a cuccost mert akkor nem fog mûködni
+
+ text-shadow: .5rem 1rem 2rem rgba($color-black, .2);                 			//szöveg árnyék : x teng, y teng 20 a háttér vastagságavastagság, szín, opacity
+ 
+ transition: all .2s;															//2 ms alatt megy az egész mozgás			&:hover be kell rakni
+ 
+ 
+ 
+ 
+				letter-spacing: .2rem;								//betûk között a távolság
+ 
+ 
+ lorem 									//Lorem html ben szövegbeillesztés
+ 
+ 
+ 
+ 
+										//Nyilacskás gomb
+										html ben csak ennyi: <a href="#" class="btn-text">Learn more &rarr;</a>
+ 
+.btn-text{
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+}
+			
+			
+													// HTML 3 Kép berakása és hooverekkel elõtérbe hozása
+			<div class="col-1-of-2">
+                <div class="composition">           <!--.composition>(img.composition__photo.composition__photo--p1)*3-->
+                    <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                    <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                    <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                </div>
+			</div>
+			
+													//CCS
+	.composition{
+		position: relative;
+
+			&__photo{
+				width: 55%;
+				box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+				border-radius: 2px;
+				position: absolute;
+				z-index: 10;
+				transition: all .1s;
+				outline-offset: 2rem;
+
+				&--p1 {
+					left: 0;
+					top: -2rem;
+				}
+
+				&--p2 {
+					right: 0;
+					top: 2rem;
+				}
+
+				&--p3 {
+					left: 20%;
+					top: 10rem;
+				}
+
+				&:hover{
+					outline: 1.5rem solid $color-primary;                   //ez a zöld keret miatt kell be kell írni a fenti outline-offset et is hogy mûködjön
+					transform: scale(1.05) translateY(-.5rem);              //ez növeli meg a kép méretét ha ráviszem az egeret
+					box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+					z-index: 20;                                            //ez hozza elõtérbe a képet ha ráviszem az egeret
+				}
+			}
+			//composition:hover composition__photo(:hover)
+			&:hover &__photo:not(:hover){
+				transform: scale(.95);                                      //ezzel mennek kisebbre a képek amik aháttérben maradnak amikor atöbbire ráviszem az egeret
+
+			}
+		}
+			
+			
+
+			
+			
+<link rel="stylesheet" href="css/icon-font.css" class="stylesheet">			//ikonok letöltése majd a head be berakása			
+			
+			
+			
+			
+			    background-size: cover;										//A képet normálisan középre teszi
+				
+				
+perspective: 150rem;				//Ezzel a kártyát át fordítja szépen minél kisebb a szám annál nagyobb érték JOnas sem tudja mik ezek az értékek
+
+			
+	        background-blend-mode: screen;					//Berakok egy képet és arra rá teszek egy szín átmenetet
+			&--1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(/img/nat-5.jpg);
+			}
+			
+
+			
+overflow: hidden;											//Overlapping the parent element tehát a kép széle le van kerekítve de akép amit rárakok nem ezért kell ez a rész
+			
+			
+			position: absolute;								//ezzel teszem a képre vagy az írásra rá a szöveget
+			
+box-decoration-break: clone;								//box decoration break ez áttetszõvé teszi a kiiírást a háttérnél
+
+			
+			
+			ul>li*5											//5 child li t hoz létre
+															//ul nél mindig kell    list-style: none;
+
+															
+&:not(:last-child){											//mindegyiken kivéve az utolsót
+
+
+			margin: 0 auto;									//Ezzel a legegyszerûbb középre rakni a szöveget
+			
+			
+shape-outside: circle(50% at 50% 50%);						//A bekezdést vagyis a mondatokat kerekítve írja le
+
+clip-path: circle(50% at 50% 50%);							//ezzel pedig az elemet teszem kerekké
+transform: translateX(-3rem);								//ezzel meszebb tudom rakni a szöveget a körtõl	
+			
+			
+			
+			
+			&:hover &__caption								//jelentése ha hovered akkor változtatjuk a caption-t
+
+backface-visibility: hidden;								//mikor megtorpan a végén a hover vagy a transzform mint mary smith nél
+
+filter: blur(3px) brightness(80%);				//a kép sötétebb lesz ha ráviszem az egeret
+			
+	
+			
+			 <section class="section-stories">									<!--videó beillesztése mp4/webm HTML-->
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="/img/video.mp4" type="video/mp4">
+                    <source src="/img/video.webm" type="video/webm">
+                    Your Browser is not Supported!
+                </video>
+            </div>
+			
+			
+position: relative;											//Valszeg ezezl teszi középre a dolgokat ez a FÕ ez a _home.scss ben a .section-stories{
+position: absolute;											//Pl a videót a kép mögé teszi z-index: -1 kell bele minid
+
+
+			overflow: hidden;								//ezekkel pedig a videót középre teszem és nem húzós lent tovább
+			&__content{
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			
+			
+			
+.book{
+    background-image: linear-gradient(105deg,				//amikor a képet felezem, hasonló a clippath hoz
+                       rgba($color-white, .9) 0%,
+                       rgba($color-white, .9) 50%,
+                       transparent 50%),
+                       url(/img/nat-10.jpg);
+			
+			
+			
+&__input:focus{									//Kijelölés megszüntetése
+    outline: none;
+			
+			
+			
+			
+			    &__input{												//ezzel és az alatta lévõ sorral tudom megadni hogy ha rákattintok az ablakra kakor alul aláhúzza és nem megy lentebb az aláhúzás miatt a sor emiatt van a transparent rész
+					border-bottom: 3px solid transparent;				
+				
+				&__input:focus{
+					border-bottom: 3px solid $color-primary;
+					 
+					 
+display:block al a nevet alulra teszi FULL néma stb
+
+
+
+				&:focus:invalid{										//Ha a név vagy az email cím nem jó akkor sárgával aláhúzza, név és email is egyben
+					border-bottom: 3px solid $color-secondary-dark;
+
+					
+ &__input:placeholder-shown + &__label {								//Amikor elkezdek írni a név vagy email es részhez akkor a FULL nem lecsúszik a doboz alá ezzel a jellel is meg lehet adni a + helyett: ~
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+    			
+			
+			
+image = inline element tehát mehet rá a text-align center
+			
+			
+			
+			list-style: none;					//A felsorolást veszi le
+			
+			text-decoration: none;				//a
+			
+			
+			
+			
+font-weight: bold;								//félkövér
+			
+			
+    &__background{																			//kör 
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);		//belülrõk a fényestõl sötétedik kifelé
+    }			
+			
+
+
+
+
+    										//Gomb a checkbox ra hivatkozva
+											
+    &__checkbox:checked ~ &__background{
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav{
+        opacity: 1;
+        width: 100%;   }
+	
+
+	
+	
+column-count: 2;								//2 részre szedi a szöveget
+column-gap: 4rem;       						//1em = 14px
+column-rule: 1px solid $color-grey-light-2;		//A két bekezdés közé tesz egy vonalat
+
+
+	hyphens: auto;						//Automatikus szöveg elválasztás, a mondatokat elválasztja automatikusan
+
+
+
+id="section-tours"						//ha ezt valahol megadom és..
+href="section-tours"					//..itt hivatkozok rá akkor a honlapon belül tudok ugrálni ez az Anchor cucc
+
+
+
+.popup{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 99999;
+
+    opacity: 0;                 //ezek a végén kellenek				//ezek a fontosak a popup ba és a lenti opacity 1
+    visibility: hidden;
+    transition: all .3s;
+
+    &:target{                   //ez a végén kell
+        opacity: 1;
+        visibility: visible;
+    }
+
+	
+
+	
+	
+		/////MEdia Queries
+
+
+
+		
+//elsõnek itt kell ez a HTML en kívül							//!!!!!!!!!!ha véletlenül nem megy akkor a only screen and et kivenni belõle ezt a legvégén tettük hozzá	
+//1em = 16px
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content};      //600px/16=37.5
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content};     //900					!!!!MINDENHOL EM van
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content};        //1200
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content};     //Minimum 1800 px                   //1800px/16
+    }
+    
+}
+
+
+!!!!!!!!!!!!!!!!!!!!!!!<meta name="viewport" content="width=device-width, initial-scale=1.0"> ennek benne kell lennie az index.html.ben hogy mûködjon a respond phone tablet kompatiobilitás stb!!!!!!!!!
+
+html {
+    font-size: 62.5%;                               //1rem = 10px; 10px/16px=62.5%
+    
+//Media query manager
+/*
+0 - 600         Phone
+600 - 900       Tablet portrait
+900 - 1200      Tablet landscape
+[1200 - 1800]   Is where our normal styles apply 
+1800 + :        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+
+
+
+    @include respond(tab-land){                     // width < 1200 ?        !!!!!ezért van elöl a közepes nem értem de késõbb megértem
+        font-size: 56.25%;                          //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port){                     //width < 900 ?
+        font-size: 50%;                             //1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(phone){                        //width < 600 ?
+        font-size: 30%;                             //1rem = 4.8px, 4.8/16 = 50%
+    }
+
+    @include respond(big-desktop){
+        font-size: 75%;                             //1rem = 12px 12/16 = 75%
+    }
+}
+	
+	
+	
+	
+	
+	
+	
+//Kép responsibiliti css ben    !!!ha véletlenül nem emgy az only screen eket ki kell szedni belõle
+
+@media only screen and (min-resolution: 192dpi) and (min-width:37.5em), (min-width: 37.5em),           //ha a felbontás nagyobb mint 192 dpi ez egy apple fákk os kijelzõ
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:37.5em), only screen and (min-width: 125em){   //ez a webkit a safari miatta kell
+    background-image: linear-gradient(
+    to right bottom,
+    #7ed56f67, #28b485af), url(../img/hero.jpg);
+    }
+	
+	
+	
+	
+	
+//Háttér homályosítás és pörgetés 
+backdrop-filter: blur(5px);
+background-color: rgba($color-black, .3);	//Itt a .3 az átteccõség transparent
+	
+	
+	
+
+	
+//Mikor s shape n látszódott egy kis négyzetes vékony csík
+ &__shape
+	overflow: hidden;
+	
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+	height: 15rem;
+	}	
+	
+	
+	
+	
+	
+//kijelölés az oldalon ha egy szöveget kijelölök megadhatjuk a színét hogy milyen legyen
+
+::selection{
+    background-color: $color-primary;			//háttér
+    color: $color-white;						//a kijelölt betû színe
+}
+	
+	
+	//Ha a hovert elõ akarom hozni telefonon tableten
+
+    //@include respond(tab-port){						//ezt átírom (ez a kártyánál volt ez a rész a fordulós cucc nál)
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover: none){	
+	
+	
+	
+	
+	
+alap basic css project kezdésnél _base.scss be
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;           //1rem = 10px,    10px/16= 62.5%
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+	
+	background-color :#ccc;
+	min-height: 100vh;
+}
+	
+	
+////root olyan mint a variablek a többi project ben csak ez jobb
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light:#FF3366;
+    --color-primary-dark:#BA265D;
+}
+	background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+	background-size: cover;
+    background-repeat: no-repeat;
+	min-height: 100vh;
+	
+	
+//flexbox nál
+flex: 0 0 18%;                                  //flex-grow, flex-shrink, flex-basis:18%
+	
+	
+	
+	
+//svg icon méretezés és színezés
+
+    &__icon{									//ocon méretezés csak ennyi width és height
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-Grey-dark-3);			//a fill el az icon színét változtatom meg
+    }
+	
+
+//Ugyan aza  szín mint a felette lévõ cuccban
+fill: currentColor;
+	
+	
+	
+//aláhúzás megszüntetése
+text-decoration: none;
+
+
+		//A Z index csak akkor mûködik ha van egy pozíciónk deklarálva
+        position: relative;
+        z-index: 10;
+	
+	
+//ha ezt beírom akkor kitölti a maradék részt amelyik hez beírom ezt de.......... lentebb
+flex:1;
+//de flexbox nál van egy trükk ez a margin-right: auto; ami csak annyit tölt ki amekkora az elem
+margin-right: auto;
+
+
+
+	
+	
+	//elválasztó volnal alul vagy felül amikor a kép is fehér meg a háttér is
+	border-bottom: 1px solid var(--color-Grey-light-2);         //#f4f2f2
+	
+	
+	//Paragrafusnál nem mûködik a last-child os cucc csak a last of type
+.paragraph:not(:last-child){
+	margin-bottom: 2rem;
+	//csak ez ûködik paragrafusnál
+	.paragraph:not(:last-of-type){					//csak minden egyforma elementen lehet alakalmazni ezt a last of type os valamit
+    margin-bottom: 2rem;
+
+	
+	
+	
+    &__item::before{
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+        //Older browsers !!nem tudunk változtatni színt
+        //background-image: url(../img/chevron-thin-right.svg);
+        //background-size: cover;
+
+        //Newer browsers - masks
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+		
+		mask-image: url(../img/chevron-thin-right.svg);					//ez az öreg browserek miatt kell
+        mask-size: cover;
+    }
+	
+	
+	
+//box-sizing:border-box; jelentése hogy tartalmazza a padding width height egy elementen
+//a kép nem lesz kisebb ha mondjuk rárakok egy bordert, de így tudom kikapcsolni
+        box-sizing: content-box;
+
+		
+		
+		
+//pozíciónk
+position: relative;
+position: absolute;		//ezzel rakja rá a másikra a cuccot
+
+
+
+//ha túl lóg a szövegen vagy a boxon
+overflow: hidden;
+
+
+
+
+flex:1;								//ha van pl 4 elem akkor az egészet 4 egyenlõ részre osztja
+
+
+
+
+//Grid
+  display: grid;
+  grid-template-rows: 150px 150px;					//repeat(2, 150px)  itt a 2 az a két sor vagy oszlop
+  grid-template-columns: repeat(2, 150px) 300px;	//1fr 300px helyett 1ft kitölti a maradék teret maradék elérhetõ hely
+  
+  grid-template-columns: repeat(3, 1fr);			//3 egyenlõ részre osztja, vagy ez a sor vagy a feletti ezek csak példák
+  
+  grid-template-columns: 1fr 2fr 1fr;				//kisebb nagyobb kisebb re osztjuk
+  
+  grid-template-columns: 50% 1fr 1fr;				//így is meg lehet adni
+  
+  grid-row-gap: 30px;				//grid-gap: 30px; ezt a kettõt ha egyforma fel lehet cserélni 1 sorra	
+  grid-column-gap: 30px;			//grid-gap: 30px;
+  
+  grid-gap: 30px;
+  
+  
+  
+
+	//Grid pozícionálás
+	grid-row-start:1 ;			
+	grid-row-end: 2;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	
+	//VAGY
+	grid-row: 1 / 2; 		// ezt a két sort ezzel váltom ki
+	grid-column: 2 / 3; 	// column nál is ugyan ez
+	
+	//VAGY
+	///Grid-area
+    grid-column: 3 / 4;
+	grid-row: 1 / 2;
+    grid-area: 1 / 3 / 2 / 4;   //row-start / col-start / row-end / col-end  
+  
+
+  
+	grid-column: 1 / span 2;	//2 cellát egyesít
+	
+    grid-column: 2 / -1;		// a legvégéig egyesít
+
+  
+  
+
+//Grid names
+  display: grid;
+  grid-template-rows: [header-start] 100px [header-end box-start] 200px [box-end main-start]   400px [main-end foot-start] 100px [foot-end];
+  
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+  grid-gap: 20px; 
+						//PL
+						.nav{
+						grid-column: col-end 3 / grid-end;
+						grid-row: box-start / main-end;
+						}
+
+
+
+
+			//Minmax használat			
+  display: grid;
+  //grid-template-rows: repeat(2, 150px);
+  //grid-template-columns: max-content 1fr 1fr min-content;
+  //grid-template-rows: repeat(2, min-content);
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+  
+  
+  
+  
+  //Using auto-fill and auto-fit
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: repeat(auto-fill, 100px);            	//8 elemnél 10 et csinál és látszik mind
+  grid-template-columns: repeat(auto-fit, 100px);             	//8 elemnél 10 et csinál és 8 ig látszik
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  //automatikusan új sorba kezdi ha egy item kisebb mint 100px 1000/100=10 
+  
+  
+  
+  
+  
+  
+  //media-qoeries és wrap helyett ez a legjobb
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	  
+	  
+	  
+//Grid en mikor képet teljessé teszünk tehát nem vág le semmit sem
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+	
+	//A felettire egy másik megoldás ha az nem meg
+	    background-size: cover;
+		background-position: center;
+		
+		
+		
+//kép világosítása vagy sötétítése
+img{
+    height: 2.5rem;
+    filter: brightness(70%);
+    }
+
+	
+	
+//Calc ez kitölti az elsõ oldalt és kivonja belõle a 6rem et
+@media only screen and (max-width: $bp-medium){
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+    }
+	
+	
+	
+	
+	
+	
+
+
+ 
+
+	
+1.HTML
+2.CSS
+3.Mindkettõ átismétlése
+4.JavaScript
+5.JQuery	Javascrip ez függvényeket könyebben hivatkozunk rá
+6.PHP regisztráció
+7.ASQL adatbázisban ebben tároljuk az adatokat, jelszó, email, felhnév lementése
+8.AJAX valós idõben kommunikál az oldallal nem kell frissíteni
+9.Flash
+10.Google map
+11.Facebook os tudás
+
+1. Tiszta forráskód írása
+2. Debugging
+3. Regex/Reguláris kifejezések
+4. SQL
+5. Nem-személyes kommunkiáció
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////GRID with !!!!FLOATS!!!! a legrégebbi megoldás GRID és FLEXBOX elõtti cucc
+////////////////////////////////////////////////////////////////////////////HTML
+
+<head>
+</head>
+
+   <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-2-of-3">
+                Col 1 of 2
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-2-of-4">
+                Col 2 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-3-of-4">
+                Col 3 of 2
+            </div>
+        </div>
+
+
+
+
+    </section>   <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-2-of-3">
+                Col 1 of 2
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-2-of-4">
+                Col 2 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-3-of-4">
+                Col 3 of 2
+            </div>
+        </div>
+    </section>
+	
+	
+/////////////////////////////////////////////////////////////////////////////css
+
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem; 
+
+.row {
+    max-width: $grid-width;
+    background-color: #eee;
+    margin: 0 auto;
+    
+
+    &:not(:last-child){
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    [class^="col-"] {                   //Atribute selector
+        background-color: orangered;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }                       
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) /2);
+
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) /3);
+    }
+
+    .col-2-of-3 {
+        width: calc( 2 * ((100% - 2 * #{$gutter-horizontal}) /3) + #{$gutter-horizontal});
+    }
+
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) /4);
+    }
+
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) /4) + #{$gutter-horizontal});
+    }
+
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) /4) + 2 * #{$gutter-horizontal});
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
