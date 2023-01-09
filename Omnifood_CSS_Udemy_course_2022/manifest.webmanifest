@@ -1,0 +1,12 @@
+{
+  "icons": [
+    {
+      "src":"img/img_conv/favicon-192.png",
+      "typy": "img/png", "sizes":"192x192"
+    },
+    {
+      "src":"img/img_conv/favicon-512.png",
+      "typy": "img/png", "sizes":"512x512"
+    }
+  ]
+}
